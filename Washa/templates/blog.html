@@ -1,0 +1,88 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %} Blog {% endblock  %}
+{% block bodyContaint %}
+
+    <!-- ============================ blog part start ===============================-->
+    <section id="about-banner">
+            <div class="container">
+                <div class="row mx-0">
+                    <div class="col-lg-12 px-0 text-center">
+                        <div class="about-banner-text">
+                            <h3>{{ blogs.0.header }}</h3>
+                            <h4>{{ blogs.0.title1 }}<i class="fas fa-angle-double-right"></i><span>{{ blogs.0.title2 }}</span></h4>
+                        </div>
+    
+                    </div>
+                </div>
+            </div>
+    </section>
+        <!-- ============================ blog us part end ===============================-->
+    
+        <!-- ============================ blog-content part start ===============================-->
+    <section id="blog-content">
+    <div class="container">
+        <div class="row mx-0">
+            <div class="col-lg-12 blog-text text-center">
+                <h3>{{ blogsContent.0.header }}</h3>
+                
+            </div>
+        </div>
+
+        <!--blog content -->
+
+        <div class="row mx-0">
+             {% for item in blogsContent %}
+            <div class="col-lg-4">
+               
+                <div class="blog-item">
+                    <div class="blog-img">
+                        <img src="{{ item.img.url }}" alt="blog" class="img-fluid w-100">
+                        <div class="overlay3">
+                            <div class="row mx-0">
+                                <div class="col-lg-12 calender">
+                                    <i class="fas fa-calendar-alt"></i>
+                                    <h5>{{ item.date }}</h5>
+                                </div>
+                                
+                            </div>
+                            <div class="row mx-0">
+                                <div class="col-lg-12  text-center">
+                                    <div class="link-link">
+                                        <a href="{{ item.img.url }}" data-lightbox="image-1" data-title="My caption"><i class="fas fa-link"></i></a>
+                                        
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                            <div class="row mx-0">
+                                <div class="col-lg-4 col-4 col-sm-4 admin px-0 text-center">
+                                    <i class="fas fa-user"></i>
+                                    <h5>{{ item.author_by }}</h5>
+                                    
+                                </div>
+                                <div class="col-lg-4 col-4 col-sm-4 like px-0 text-center">
+                                    <i class="fas fa-thumbs-up"></i>
+                                    <h5>{{ item.like }}</h5>
+                                </div>
+                                <div class="col-lg-4  col-4 col-sm-4 comment px-0 text-center">
+                                    <i class="fas fa-comment"></i>
+                                    <h5>{{ item.cmnt }}</h5>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <h4>{{ item.title }}</h4>
+                    <p>{{ item.describe }}</p>
+                    <a href="#">{{ item.button }} <i class="fas fa-arrow-right"></i></a>
+                </div>
+              
+
+            </div>
+              {% endfor %}
+        </div>
+    </div>
+</section>    
+        <!-- ============================ blog-content part end ===============================-->
+{% endblock  %}

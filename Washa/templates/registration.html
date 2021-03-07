@@ -1,0 +1,87 @@
+{% extends 'base.html' %} 
+{% load static %}
+{% block title %} singUp {% endblock  %}
+{% block  bodyContaint%}
+
+
+    <!-- ============================ about us part start ===============================-->
+    <section id="about-banner">
+        <div class="container">
+            <div class="row mx-0">
+                <div class="col-lg-12 px-0 text-center">
+                    <div class="about-banner-text">
+                        <h3>{{bannerdatas.0.header}}</h3>
+                        <h4>{{bannerdatas.0.title1}}<i class="fas fa-angle-double-right"></i><span>{{bannerdatas.0.title2}}</span></h4>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ============================ about us part end ===============================-->
+
+    <!-- ============================ form part start ===============================-->
+    <section class="form">
+        <div class="container">
+        <!--start message--->
+        <br>
+                            <div class="form-grouped">
+                                {% if messages %}
+                                <ul class="messages">
+                                 {% for message in messages %}
+                                 <li>
+                                  <div class="alert {{ message.tags }} alert-dismissible fade show" role="alert">
+                                 {{ message }}
+                                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                                </div>
+                                </li>
+                                 {% endfor %}
+                                </ul>
+                                {% endif %}
+                            </div>
+                            <!--end message--->
+            <div class="row">
+               
+                 <!-- ============================ form registration part ===============================-->
+                <div class="col-md-12">
+                    <div class="wrapper">
+                        <h3 style="margin-bottom: 26px;">{{formsdata.0.registerHeader}} <span class="pcolor">({{formsdata.0.hint}})</span></h3>
+                        <p class="text-info text-muted">{{formsdata.0.RegisterTitle}} </p>        
+                        <form method="POST">
+                        {% csrf_token %}
+                        <div class="row">
+                            
+                            <div class="col-md-6">
+                            
+                                <input class="w-100" type="text" placeholder="Name" name="username" required>
+                                <input class="w-100" type="email" placeholder="E-mail" name="email" required>
+                                
+                            </div>
+                            <div class="col-md-6">
+                                <input class="w-100" type="password" placeholder="Password" name="password1" required>
+                                <input class="w-100" type="password" placeholder="Confirm Password" name="password2" required>
+                            </div>
+
+                            
+                        </div>
+                        
+                        <div class="check">
+                            <label>
+                                <input type="checkbox" required>
+                                <span>I accept all the term and conditions, including privacy policy</span>
+                            </label>
+                        </div>
+                        <button>Register</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ============================ form part end ===============================-->
+
+    
+    <a href="#" class="back-to-top"><i class="fas fa-location-arrow"></i></a>
+{% endblock  %}

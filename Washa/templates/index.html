@@ -1,0 +1,369 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block preloader %}
+    <div class="preloader">
+        <img src="{% static 'images/preloader.gif' %}" alt="preloader">
+    </div>
+    
+{% endblock  %}
+{% block title %} E-Buy {% endblock  %}
+{% block  bodyContaint%}
+<!-- ============================ banner part start ===============================-->
+<section id="banner">
+    <i class="fas fa-chevron-left left"></i>
+    <i class="fas fa-chevron-right right"></i>
+    <div class="banner-slider">
+        {% for item in sliderData %}
+            
+            <div class="bslider-item" style="background:url( {{item.slider_images.url}}) ;">
+                
+                <div class="container">
+                    <div class="row mx-0">
+                        <div class="col-lg-5 px-0">
+                            <div class="banner-text">
+                                <h3>{{ item.year }}</h3>
+                                <h4>{{ item.Header }}</h4>
+                                <p>{{ item.describe }}</p>
+                                <div class="a-button">
+                                    <a href="#">{{ item.left_button }}</a>
+                                    <a href="#">{{ item.right_button }}</a>
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+        
+        
+        
+    </div>
+    
+</section>
+<!-- ============================ banner part end ===============================-->
+<!-- ============================ shipping part start ===============================-->
+<section id="shipping">
+    <div class="container">
+        <div class="row mx-0">
+            {% for item in shippings %}
+                
+                
+                <div class="col-lg-4 px-0">
+                    <div class="shipp-item text-center">
+                        <i class="fas fa-cog"></i>
+                        <h5>{{ item.header}}</h5>
+                        <p>{{ item.details }}</p>
+                    </div>
+                    
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+<!-- ============================ shipping part end ===============================-->
+<!-- ============================ special part start ===============================-->
+<section id="special">
+    <div class="container">
+        <div class="row mx-0">
+            {% for item in special %}
+                <div class="col-lg-4">
+                    <div class="special-item">
+                        <img src="{{item.img.url}}" alt="special1" class="img-fluid w-100">
+                        <div class="overlay text-center">
+                            <h3>{{item.product_head}}</h3>
+                            <h4> {{item.product_name}}</h4>
+                            <a href="#">{{item.button_name}}</a>
+                        </div>
+                    </div>
+                </div>
+                
+            {% endfor %}
+        </div>
+    </div>
+</section>
+<!-- ============================ special part end ===============================-->
+<!-- ============================ feature part start ===============================-->
+<section id="feature">
+    <div class="container">
+        <div class="row mx-0">
+            <div class="col-lg-12 px-0">
+                <div class="feature-text text-center">
+                    <h3>{{featuer_heads.0.header}}</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section id="feature2">
+    <div class="container">
+        <div class="row mx-0">
+            <div class="col-lg-12 text-center px-0">
+                <div class="catagories" id="filters">
+                    <button class="button" data-filter="*">{{ featuer_heads.0.menu1 }}</button>
+                    <button class="button" data-filter=".men">{{ featuer_heads.0.menu2 }} </button>
+                    <button class="button" data-filter=".women">{{ featuer_heads.0.menu3 }} </button>
+                    <button class="button" data-filter=".children">{{ featuer_heads.0.menu4 }} </button>
+                    <button class="button acc" data-filter=".acceso">{{ featuer_heads.0.menu5 }} </button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="row grid mx-0" >
+            {% for item in featuer_goods %}
+            <div class="col-lg-3 col-sm-6 col-md-6   element-item men">
+                <div class="product">
+                    <img src="{{ item.product_img.url }}" alt="women1" class="img-fluid w-100">
+                    <div class="overlay1  ">
+                        <div class="feature-icon text-center">
+                            <a href="#"><i class="fas fa-heart"></i></a>
+                            <a href="#"><i class="fas fa-random"></i></a>
+                            <a href="#"><i class="fas fa-shopping-basket"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mx-0">
+                    <div class="col-lg-6 px-0">
+                        <h5>{{ item.product_title }}</h5>
+                    </div>
+                    <div class="col-lg-6 px-0 text-right">
+                        <h6>{{ item.product_price }}</h6>
+                    </div>
+                    <div class="col-lg-6 px-0  star">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half"></i>
+                    </div>
+                </div>
+            </div><!--1 part end-->
+                
+            {% endfor %}    
+                
+                
+                
+        </div>
+    </div>
+    </section>
+    <!-- ============================ feature part end ===============================-->
+    <!-- ============================ microsoft part start ===============================-->
+    <section id="microsoft">
+        <div class="container">
+            <div class="row mx-0">
+                <div class="col-lg-6 img">
+                    <img src="{{launchProduct.0.img.url}}" alt="laptop" class="img-fluid ">
+                </div>
+                <div class="col-lg-6 px-0">
+                    <div class="micro-text">
+                        <h5>{{launchProduct.0.header}}</h5>
+                        <h3>{{launchProduct.0.productName}}</h3>
+                        <p>{{launchProduct.0.details}}</p>
+                        <h5 class="launch">{{launchProduct.0.launchTitle}}</h5>
+                        <div class="row mx-0">
+                            <div class="col-lg-3 col-3 col-sm-3 col-md-3 px-0 text-center">
+                                <div class="count-item">
+                                    <h4 id="days" ></h4>
+                                    <h6>days</h6>
+                                </div>
+                                
+                            </div>
+                            <div class="col-lg-3 col-3 col-sm-3 col-md-3 px-0 text-center">
+                                <div class="count-item">
+                                    <h4 id="hours"></h4>
+                                    <h6>hours</h6>
+                                </div>
+                                
+                            </div>
+                            <div class="col-lg-3 col-3 col-sm-3 col-md-3 px-0 text-center">
+                                <div class="count-item">
+                                    <h4 id="minutes"></h4>
+                                    <h6>mins</h6>
+                                </div>
+                                
+                            </div>
+                            <div class="col-lg-3 col-3 col-sm-3 col-md-3 px-0 text-center">
+                                <div class="count-item">
+                                    <h4 id="seconds"></h4>
+                                    <h6>sec</h6>
+                                </div>
+                                
+                            </div>
+                            
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ============================ microsoft part end ===============================-->
+    <!-- ============================ latest part start ===============================-->
+     <section id="latest">
+    <div class="container">
+        <div class="row mx-0">
+            <div class="col-lg-12 text-center">
+                <div class="latest-text">
+                    <h3>{{latest.0.header}}</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section id="mobile">
+    <i class="fas fa-chevron-left left1 fnt-icon"></i>
+    <i class="fas fa-chevron-right right1 fnt-icon"></i>
+    
+    <div class="container">
+        
+        <div class="row mx-0 mobile-slide">
+            {% for item in latest %}
+            
+            <div class="col-lg-3 mobile-part">
+                <div class="mobile-item">
+                    <img src="{{ item.img.url }}" alt="mobile" class="img-fluid w-100">
+                    <div class="overlay2 text-center">
+                        <div class="mobile-icon">
+                            <div class="link-icon2 ">
+                                <a href="#"><i class="fas fa-heart"></i></a>
+                            </div>
+                            <div class="link-icon2 ">
+                                <a href="#"><i class="fas fa-random"></i></a>
+                            </div>
+                            <div class="link-icon2 ">
+                                <a href="#"><i class="fas fa-shopping-basket"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mx-0">
+                    <div class="col-lg-6 px-0">
+                        <h5>{{ item.P_name }}</h5>
+                        
+                    </div>
+                    <div class="col-lg-6 px-0 text-right">
+                        <h6>{{ item.P_price }}</h6>
+                        
+                    </div>
+                    <div class="col-lg-6 px-0  star">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half"></i>
+                        
+                    </div>
+                </div>
+            </div>
+
+            {% endfor %}
+        </div>
+        
+    </div>
+    
+</section>
+    <!-- ============================ latest part end ===============================-->
+    <!-- ============================ testimonial part start ===============================-->
+    <section id="test">
+    <div class="container">
+        <div class="row mx-0">
+            <div class="col-lg-12 text-center">
+                <div class="test-text">
+                    <h3>{{Testimonial.0.header}}</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section id="teammate">
+    <i class="fas fa-chevron-left left2 fnt-icon1"></i>
+    <i class="fas fa-chevron-right right2 fnt-icon1"></i>
+    <div class="container">
+        <div class="row mx-0 team-slide">
+            {% for item in Testimonial%}
+            <div class="col-lg-6 team-content">
+                <div class="row mx-0">
+                    <div class="col-lg-3 team-img pl-0">
+                        <img src="{{ item.personImg.url }}" alt="team" class="img-fluid ">
+                    </div>
+                    <div class="col-lg-9 team-text px-0">
+                        <h5>{{ item.personName }}</h5>
+                        <h6>{{ item.personTitle }}</h6>
+                        <p>{{ item.describe }}</p>
+                        <div class="row mx-0">
+                            <div class="col-lg-12 sign text-right">
+                                <h4>{{ item.signature }}</h4>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+            {% endfor %}
+            
+            
+        </div>
+    </div>
+</section>
+    <!-- ============================ testimonial part end ===============================-->
+    <!-- ============================ blog part start ===============================-->
+     <section id="blog">
+    <div class="container">
+        <div class="row mx-0">
+            <div class="col-lg-12 blog-text text-center">
+                <h3>{{ Blogs.0.header }}</h3>
+            </div>
+        </div>
+
+        <div class="row mx-0">
+            {% for item in Blogs %}
+
+            <div class="col-lg-4">
+                <div class="blog-item">
+                    <div class="blog-img">
+                        <img src="{{ item.img.url }}" alt="blog" class="img-fluid w-100">
+                        <div class="overlay3">
+                            <div class="row mx-0">
+                                <div class="col-lg-12 calender">
+                                    <i class="fas fa-calendar-alt"></i>
+                                    <h5>{{ item.date}}</h5>
+                                </div>
+                                
+                            </div>
+                            <div class="row mx-0">
+                                <div class="col-lg-12  text-center">
+                                    <div class="link-link">
+                                        <a href="{{ item.img.url }}" data-lightbox="image-1" data-title="My caption"><i class="fas fa-link"></i></a>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                            <div class="row mx-0">
+                                <div class="col-lg-4 col-4 col-sm-4 admin px-0 text-center">
+                                    <i class="fas fa-user"></i>
+                                    <h5>{{ item.author_by }}</h5>
+                                </div>
+                                <div class="col-lg-4 col-4 col-sm-4 like px-0 text-center">
+                                    <i class="fas fa-thumbs-up"></i>
+                                    <h5>{{ item.like }}</h5>
+                                </div>
+                                <div class="col-lg-4  col-4 col-sm-4 comment px-0 text-center">
+                                    <i class="fas fa-comment"></i>
+                                    <h5>{{ item.cmnt }}</h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <h4>{{ item.title }}</h4>
+                    <p>{{ item.describe }}</p>
+                    <a href="{% url 'blog' %}">{{ item.button }} <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+
+             {% endfor %}
+        </div>
+    </div>
+</section>
+    <!-- ============================ blog part end ===============================-->
+    
+{% endblock%}

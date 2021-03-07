@@ -1,0 +1,155 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %} Shop {% endblock  %}
+{% block bodyContaint %}
+<!-- ============================ shop banner part start ===============================-->
+<section id="about-banner">
+    <div class="container">
+        <div class="row mx-0">
+            <div class="col-lg-12 px-0 text-center">
+                <div class="about-banner-text">
+                    <h3>{{ shops.0.header }}</h3>
+                    <h4>{{ shops.0.title1 }}<i class="fas fa-angle-double-right"></i><span>{{ shops.0.title2}}</span></h4>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+<!-- ============================ about us part end ===============================-->
+
+<!-- ============================ controls part start ===============================-->
+<section class="controls">
+    <div class="container">
+        <div class="outer-border">
+            <div class="box">
+                <div class="row">
+                    <!-- view controls start-->
+                    <div class="col-md-2">
+                        <i class="fas fa-th active"></i>
+                        <i class="fas fa-list-ul"></i>
+                    </div>
+                    <!-- view controls end-->
+                    <!--sort control start-->
+                    <div class="col-md-4 offset-md-2">
+                        <div class="sortshow">
+                            <div class="sort">
+                                <span> {{ controls.0.title1 }}</span>
+                                <select>
+                                    {% for item in controls %}
+                                    <option>{{ item.sortedBy }}</option>
+                                    {% endfor %}                                     
+                                </select>
+                            </div>
+
+                            <div class="show">
+                                <span>{{ controls.0.title2 }}:</span>
+                                <select>
+                                    {% for item in controls %} 
+                                    <option>{{ item.NumberOfshowPruduct }}</option>
+                                    {% endfor %}
+                                </select>
+                            </div>
+
+                        </div>
+                    </div>
+                    <!--sort control end-->
+                    <!--pagination start-->
+                    <div class="col-md-4">
+                        <div class="pagination">
+                            <span>{{ controls.0.title3 }}: </span>
+                            <!--                            <div class="numbers">-->
+                             {% for item in controls %}   
+                            <div class="number-box">{{ item.pages }}</div>
+                             {% endfor %}
+                            <span> of</span>
+                            <div class="number-box">{{ controls.0.lastOfPage_number }}</div>
+                            <i class="fas fa-caret-right"></i>
+                            <!--                            </div>-->
+                        </div>
+                    </div>
+                    <!--pagination end-->
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- ============================ controls part end ===============================-->
+
+
+<!-- ============================ products part start ===============================-->
+<section class="products">
+    <div class="container">
+        <div class="row grid mx-0">
+            {% for item in shopData %}
+
+            <div class="col-lg-3 col-sm-6 col-md-6   element-item men">
+                <div class="product">
+                    <img src="{{ item.img.url }}" alt="women1" class="img-fluid w-100">
+                    <div class="overlay1  ">
+                        <div class="feature-icon text-center">
+                            <a href="#"><i class="fas fa-heart"></i></a>
+                            <a href="#"><i class="fas fa-random"></i></a>
+                            <a href="#"><i class="fas fa-shopping-basket"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mx-0">
+                    <div class="col-lg-6 px-0">
+                        <h5>{{ item.p_name }}</h5>
+                    </div>
+                    <div class="col-lg-6 px-0 text-right">
+                        <h6>${{ item.p_price_usd }}.00</h6>
+                    </div>
+                    <div class="col-lg-6 px-0  star">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half"></i>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+
+
+        </div>
+    </div>
+</section>
+<!-- ============================ products part end ===============================-->
+
+<!-- ============================ pagination part start ===============================-->
+<section class="pagination2">
+    <div class="container">
+        <div class="outer-border">
+            <div class="box">
+                <div class="row">
+                    <!--pagination start-->
+                    <div class="col-md-4 offset-md-4">
+                        <div class="pagination text-center">
+                            <span>{{ controls.0.title3 }}: </span>
+                            <!--                            <div class="numbers">-->
+                             {% for item in controls %}   
+                            <div class="number-box">{{ item.pages }}</div>
+                             {% endfor %}
+                            <span> of</span>
+                            <div class="number-box">{{ controls.0.lastOfPage_number }}</div>
+                            <i class="fas fa-caret-right"></i>
+
+                            <!--                            </div>-->
+                        </div>
+                    </div>
+                    <!--pagination end-->
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+<!-- ============================ pagination part end ===============================-->
+
+ 
+<a href="#" class="back-to-top"><i class="fas fa-location-arrow"></i></a>
+
+{% endblock  %}
+ 

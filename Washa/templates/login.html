@@ -1,0 +1,80 @@
+{% extends 'base.html' %} 
+{% load static %}
+{% block title %} E-buy Login {% endblock  %}
+{% block  bodyContaint%}
+{% block mylogin %}    
+                    {% comment %} <a href="{% url 'login' %}"><h5  class="text-primary">Login &nbsp;&nbsp;&nbsp;</h5></a> {% endcomment %}
+{% endblock  %}
+
+
+    <!-- ============================ about us part start ===============================-->
+    <section id="about-banner">
+        <div class="container">
+            <div class="row mx-0">
+                <div class="col-lg-12 px-0 text-center">
+                    <div class="about-banner-text">
+                        <h3>{{bannerdatas.0.header}}</h3>
+                        <h4>{{bannerdatas.0.title1}}<i class="fas fa-angle-double-right"></i><span>{{bannerdatas.0.title2}}</span></h4>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ============================ about us part end ===============================-->
+
+    <!-- ============================ form part start ===============================-->
+    <section class="form">
+        <div class="container">
+        <!--start message--->
+        <br>
+         <div class="form-grouped">
+                                {% if messages %}
+                                <ul class="messages">
+                                 {% for message in messages %}
+                                 <li>
+                                  <div class="alert {{ message.tags }} alert-dismissible fade show" role="alert">
+                                 {{ message }}
+                                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                                </div>
+                                </li>
+                                 {% endfor %}
+                                </ul>
+                                {% endif %}
+                            </div>
+                           
+                            <!--end message--->
+            <div class="row">
+            <div class="col-md-4"></div>
+                <div class="col-md-3">
+                
+                    <div class="wrapper">
+                        <h3>{{formsdata.0.loginHeader}}</h3>
+                        <p class="text-danger">{{formsdata.0.logintitle}}</p>
+
+                        <form method="POST">
+                        {% csrf_token %}
+                            <input class="w-100" type="text" placeholder="User name" name="name">
+                            <input class="w-100" type="password" placeholder="Password" name="password">
+                            <div class="check">
+                                <label>
+                                    <input type="checkbox">
+                                    <span class="text-info">Remember Me</span>
+                                </label>
+                                <a href="{% url 'forgotpass' %}">Forgot Password?</a>
+                            </div>
+                            <button>Login</button>
+                        </form>
+
+                    </div>
+                </div>
+                <div class="col-md-4"></div>
+                 
+    </section>
+    <!-- ============================ form part end ===============================-->
+
+    
+    <a href="#" class="back-to-top"><i class="fas fa-location-arrow"></i></a>
+{% endblock  %}
