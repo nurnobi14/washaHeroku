@@ -29,7 +29,18 @@ def authlogin(request):
             print('invalid username or password!')
             messages.error(request,'invalid username or password!')
     
-    return render(request,'login.html')           
+    data = Header_footerData.objects.all()
+    banner = bannarLayout.objects.all()
+    formdata = FormLayout.objects.all()
+    
+    
+    context = {
+        'datas': data,
+        'bannerdatas': banner,
+        'formsdata': formdata,
+    }
+       
+    return render(request,'login.html',context)           
 
 def userRegister(request):
     if request.method == "POST":
@@ -91,14 +102,38 @@ def userRegister(request):
 
 
 def userForgot(request):
-    return render(request,'forgot.html')
+    data = Header_footerData.objects.all()
+     
+    
+    context = {
+        'datas': data,
+         
+         
+    }
+    return render(request,'forgot.html',context)
 
 
 def userVerify(request):
-    return render(request,'veryfi.html')
+    data = Header_footerData.objects.all()
+     
+    
+    context = {
+        'datas': data,
+         
+         
+    }
+    return render(request,'veryfi.html',context)
 
 def UserRepass(request):
-    return render(request,'repass.html')
+    data = Header_footerData.objects.all()
+     
+    
+    context = {
+        'datas': data,
+         
+         
+    }
+    return render(request,'repass.html',context)
 
 def Userprofile(request):
     return render(request,'profile.html')

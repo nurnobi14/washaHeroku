@@ -1,0 +1,7 @@
+uname = shuvomyshops
+pas = shuvo56761676@#@#
+mail = 15266
+
+heroku:
+same mail 
+pas = shuvo56761676@#

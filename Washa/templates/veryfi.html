@@ -1,24 +1,25 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title>verification</title>
+ {% extends 'base.html' %}
+{% load static %}
+ {% block  title%}Email Verify!{% endblock  %} 
+{% block styles %}
 	<style type="text/css" media="screen">
 		body{
 	margin: 0;
 	padding: 0;
 	font-family:sans-serif;
-	background: #34495e;
+	background: darkgray;
+	 
 }
-.box{
-
-	width:300px;
-	padding: 40px;
-	position: absolute;
-	top: 50%;
-	left:50%;
+.box {
+	width: 300px;
+	padding: 20px;
+	/* top: 84%; */
+	/* left: 50%; */
 	transform: translate(-50%,-50%);
 	background: #191919;
 	text-align: center;
+	margin-left: 50%;
+	margin-top: 20%;
 }
 .box h1{
 	color:white;
@@ -74,14 +75,16 @@ i .forgot:hover{
 	text-transform: lowercase;
 }
 	</style>
-</head>
-<body>
-	<form class="box" action="{% url 'repass' %}" method="post" accept-charset="utf-8">
+{% endblock  %}
+{% block  bodyContaint%}
+   <div class="container">
+  <form class="box" action="{% url 'repass' %}" method="post" accept-charset="utf-8">
 	{% csrf_token %}
 		 
 		 <h1 class ="text-center">Enter verification code</h1>
 		 <input type="text" name="user" placeholder=" ">
 		 <input type="submit" name="button" value="Veryfi">	 
 	</form>
-</body>
-</html>
+   </div>
+{% endblock  %} 
+	 
