@@ -101,7 +101,7 @@ def userRegister(request):
     return render(request,'registration.html',context)
 
 
-def userForgot(request):
+#def userForgot(request):
     data = Header_footerData.objects.all()
      
     
@@ -113,7 +113,7 @@ def userForgot(request):
     return render(request,'forgot.html',context)
 
 
-def userVerify(request):
+#def userVerify(request):
     data = Header_footerData.objects.all()
      
     
@@ -124,7 +124,7 @@ def userVerify(request):
     }
     return render(request,'veryfi.html',context)
 
-def UserRepass(request):
+#def UserRepass(request):
     data = Header_footerData.objects.all()
      
     

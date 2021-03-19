@@ -26,7 +26,7 @@
 	text-transform: uppercase;
 	font-weight: 500;
 }
-.box input[type="text"],input[type="password"]{
+.box input[type="email"],input[type="password"]{
 	border: 2px solid #3498db;
 	background: none;
 	display: block;
@@ -39,7 +39,7 @@
 	border-radius: 24px;
 	transition: 0.25s;
 }
-.box input[type="text"]:focus,input[type="password"]:focus{
+.box input[type="email"]:focus,input[type="password"]:focus{
 
 	width: 280px;
 	border-color: #2ecc71;
@@ -74,15 +74,18 @@ i .forgot:hover{
 	font-size: 16px;
 	text-transform: lowercase;
 }
+label{
+	display:none;
+}
 	</style>
 {% endblock  %}
 {% block  bodyContaint%}
    <div class="container">
-   <form class="box" action="{% url 'Userveryfi' %}" method="post" accept-charset="utf-8">
+   <form class="box"method="post" accept-charset="utf-8">
 		 {% csrf_token %}
-		 <h1 class ="text-center">Enter username or email</h1>
-		 
-		 <input type="text" name="user" placeholder="Username">
+		 <h1 class ="text-center">Enter User Email</h1>
+		 {{form}}
+		 {% comment %} <input type="email" name="usermail" placeholder="User mail"> {% endcomment %}
 		 <input type="submit" name="button" value="send">	 
 	</form>
    </div>
