@@ -7,7 +7,16 @@
     
 {% endblock  %}
 {% block title %} E-Buy {% endblock  %}
+{% block search_section %}
+                        <div class="search">
+                        <form action="" method="GET">
+                            <input type="text" class="form-control" name="query" value="{{ request.GET.query }}">
+                            <button  type="submit"><i class="fas fa-search"></i></button> 
+                        </form>
+                    </div>
+                    {% endblock %}
 {% block  bodyContaint%}
+
 <!-- ============================ banner part start ===============================-->
 <section id="banner">
     <i class="fas fa-chevron-left left"></i>

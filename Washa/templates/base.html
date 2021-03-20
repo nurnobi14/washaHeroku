@@ -118,39 +118,11 @@
                       </nav>
                     </div>
                 <div class="col-lg-4 text-center px-0">
-                    <div class="search">
-                        <input type="text" class="form-control" >
-                           <button><i class="fas fa-search"></i></button> 
-                           <div class="shop">
-                                <a href="#"> <i class="fas fa-shopping-bag bag"></i><h5> 2 Items</h5></a>
-                                <div class="shop-item">
-                                    <div class="row mx-0">
-                                        <div class="col-lg-12 px-0">
-                                           <a href="#"><h3>Item 1</h3></a> 
-                                        </div>
-                                        
-                                    </div>
-                                    <div class="row mx-0">
-                                            <div class="col-lg-12 px-0">
-                                                    <a href="#"><h3>Item 2</h3></a> 
-                                            </div>
-                                            
-                                        </div>
-                                        <div class="row mx-0">
-                                                <div class="col-lg-12 px-0">
-                                                        <a href="#"><h3>Item 3</h3></a> 
-                                                </div>
-                                                
-                                            </div>
-                                            <div class="row mx-0">
-                                                    <div class="col-lg-12 px-0">
-                                                            <a href="#"><h3>Item 4</h3></a> 
-                                                    </div>
-                                                    
-                                                </div>
-                                </div>
-
-                           </div>
+                    {% block search_section %}
+                         <div class="search">
+                         <p class="text-danger text-capitalize">go to home page for any query</p>
+                    </div>
+                    {% endblock %}
                              
 
                     </div>

@@ -1,0 +1,159 @@
+/*<!-- ============================ controls part start ===============================-->*/
+.controls {
+    margin-top: 100px;
+}
+
+.controls .outer-border, .pagination2 .outer-border {
+    border: 1px solid #DDDDDD;
+}
+
+.box {
+    padding: 10px;
+}
+
+.controls .outer-border .box i, .pagination i {
+    padding: 10px 8px;
+    border: 1px solid #444444;
+}
+
+.controls .outer-border .box i:hover {
+    cursor: pointer;
+}
+
+.active {
+    color: white;
+    background-color: #DE4644;
+    border-color: #DE4644 !important;
+
+}
+
+.sortshow {
+    display: flex;
+    justify-content: space-around;
+}
+
+.sortshow .sort {
+}
+
+.sortshow .sort span, .sortshow .show span, .pagination span {
+    font-size: 14px;
+    color: #444444;
+}
+
+.sortshow .sort select, .sortshow .show select {
+    border: 1px solid #444444;
+    padding: 8px 0 7px 8px;
+}
+
+.sortshow .show {
+}
+
+.pagination {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.pagination .numbers {
+    display: flex;
+}
+
+.pagination .number-box {
+    padding: 7.5px 12px;
+    margin: 0 3px;
+    border: 1px solid #444444;
+    font-size: 14px;
+    color: #444444;
+}
+
+/*<!-- ============================ controls part end ===============================-->*/
+
+/*<!-- ============================ products part start ===============================-->*/
+.products {
+}
+
+.products .element-item {
+    margin-top: 60px;
+}
+
+/*<!-- ============================ products part end ===============================-->*/
+
+/*<!-- ============================ pagination part start ===============================-->*/
+.pagination2 {
+    margin-top: 60px;
+    margin-bottom: 95px;
+}
+
+/*<!-- ============================ pagination part end ===============================-->*/
+
+/*<!-- ============================ form part start ===============================-->*/
+.form {
+}
+
+.form .wrapper {
+    margin-top: 95px;
+}
+
+.form .wrapper h3 {
+    font-size: 20px;
+    color: #222222;
+    font-weight: 500;
+    margin-bottom: 30px;
+}
+
+.form .wrapper input {
+    margin-bottom: 10px;
+    padding: 5px 0 5px 9px;
+    
+}
+.form .wrapper input::placeholder{
+    font-size: 14px;
+    color: #777777;
+    font-weight: 400;
+}
+.form .wrapper .check {
+    margin-top: 15px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.form .wrapper .check input[type=checkbox] {
+    margin: 0 5px 0 0;
+}
+
+.form .wrapper .check span, .pcolor {
+    font-size: 14px;
+    line-height: 26px;
+    color: #444444;
+}
+
+.form .wrapper .check label {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.form .wrapper .check a{
+    font-size: 14px;
+    color: #de4644;
+    font-weight: 400;
+    text-align: right;
+}
+
+.form .wrapper .check a:hover{
+    text-decoration: none;
+}
+
+.form .wrapper button{
+    padding: 9px 23px;
+    border: 1px solid black;
+    margin-top: 20px;
+    transition: all linear .3s;
+}
+.form .wrapper button:hover{
+    background-color: #DE4644;
+    border-color: #DE4644;
+    color: white;
+}
+
+/*<!-- ============================ form part end ===============================-->*/

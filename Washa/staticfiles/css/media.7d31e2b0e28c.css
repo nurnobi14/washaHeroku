@@ -1,0 +1,391 @@
+/*================== xtra small device ============== */
+@media(max-width:575.98px){
+    .lang {
+        
+        margin-right: 0;
+        
+    }
+    .usd {
+        
+        margin-right: 0;
+        
+    }
+    .details {
+        
+        width: 100%;
+        padding: 10px 0;
+         padding-right: 0px;
+         margin-right: 0;
+    }  
+    .navbar {
+        padding: 0;
+    }
+    .navbar-brand {
+         padding-top: 10px; 
+         padding-bottom: 0; 
+    }
+    .navbar-light .navbar-toggler {
+        
+        margin-right: 0;
+    }
+    .navbar-expand-lg .navbar-nav .nav-link::before {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .navbar-expand-lg .navbar-nav .nav-link::after {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .search {
+        padding-top: 15px;
+        padding-bottom: 10px;
+    }
+    button {
+        
+        margin-right: 0;
+    }
+    .banner-text {
+        
+        padding-top: 80px;
+    }
+    .banner-text p {
+        
+        padding-bottom: 60px;
+        
+    }
+    .banner-text a {
+        margin-right: 10px;
+    }
+    #banner i {
+        margin-bottom: 0;
+    }
+    .left {
+        left: 44%;
+        transform: translateX(-44%);
+        
+    }
+    .right {
+        left: 56%;
+        transform: translateX(-56%);
+        
+    }
+    .shipp-item {
+        border-right: none;
+    }
+    .special-item {
+        margin-bottom: 20px;
+    }
+    .overlay {
+        height: 50%;
+        bottom: -40px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .overlay a {
+        padding: 10px 15px;
+        
+    }
+    .feature-text h3 {
+        
+        font-size: 33px;
+        
+    }
+    .micro-text {
+        padding-top: 10px;
+        
+    }
+    .latest-text h3 {
+        font-size: 35px;
+        
+    }
+    .left1 {
+        left: 44%;
+        transform: translateX(-44%);
+    }
+    .right1 {
+        left: 56%;
+        transform: translateX(-56%);
+    }
+    .team-img{
+        padding-bottom: 10px;
+    }
+    #teammate .fnt-icon1 {
+        width: 40px;
+        height: 40px;
+        line-height: 40px;
+        
+    }
+    .left2 {
+        left: 42%;
+        transform: translateX(-42%); 
+    }
+    .right2 {
+        left: 58%;
+        transform: translateX(-58%);
+    }
+    .link-link i {
+        margin-top: 65px;
+        margin-bottom: 50px;
+    }
+    .second h5 {
+        padding-bottom: 20px;
+    }
+    .third h5 {
+        padding-bottom: 20px;
+    }
+    .four h5 {
+        text-align: left;
+    }
+    .follow-icon{
+        margin-bottom: 10px;
+    }
+    .ftr p {
+        padding-top: 0px;
+        margin-bottom: 10px;
+    }
+    .credit {
+        text-align: left;
+    }
+    #ftr-down {
+        
+        padding-bottom: 10px;
+    }
+    .preloader img{
+        width: 180px;
+    }
+}
+@media(min-width:575px) and (max-width:575.98px){
+    .link-link i {
+        margin-top: 101px;
+        margin-bottom: 215px;
+    }
+}
+/*================== small device ============== */
+@media(min-width:576px) and (max-width:767.98px){
+    .lang {
+        margin-right: 0px;
+        
+    }
+    .usd {
+        margin-right: 0px;
+    }
+    .details {
+        margin-right: 0px;
+    }
+    .navbar-brand {
+        padding-top: 0px;
+        padding-bottom: 0px;
+    }
+    .search {
+        padding-top: 0px;
+        padding-bottom: 10px;
+    }
+    .navbar-expand-lg .navbar-nav .nav-link::before {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .navbar-expand-lg .navbar-nav .nav-link::after {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .banner-text {
+        padding-top: 80px;
+    }
+    .banner-text p {
+        padding-bottom: 55px;
+    }
+    #banner i {
+        margin-bottom: 0px;
+    }
+    .left {
+        left: 46%;
+        transform: translateX(-46%);
+    }
+    .right {
+        left: 54%;
+        transform: translateX(-54%);
+    }
+    .shipp-item {
+        border-right: none;
+    }
+    .special-item {
+        margin-bottom: 20px;
+    }
+    .feature-icon i {
+        margin: 20px 15px;
+    }
+    .img {
+        padding-top: 0px;
+        padding-bottom: 20px;
+    }
+    .left1 {
+        left: 46%;
+        transform: translateX(-46%);
+    }
+    .right1 {
+        left: 54%;
+        transform: translateX(-54%);
+    }
+    #test {
+        padding-top: 150px;
+    }
+    .team-img {
+        padding-bottom: 10px;
+    }
+    #teammate .fnt-icon1 {
+        width: 40px;
+        height: 40px;
+        line-height: 40px;
+    }
+    .left2 {
+        left: 45%;
+        transform: translateX(-45%);
+    }
+    .right2 {
+        left: 55%;
+        transform: translateX(-55%);
+    }
+    .link-link i {
+        margin-top: 125px;
+        margin-bottom: 160px;
+    }
+    .second h5 {
+        padding-bottom: 20px;
+    }
+    .third h5 {
+        padding-bottom: 20px;
+    }
+    .four h5 {
+        text-align: left;
+    }
+    .follow-icon {
+        margin-bottom: 10px;
+    }
+    .ftr p {
+        padding-top: 0px;
+        margin-bottom: 10px;
+    }
+    .credit {
+        text-align: left;
+    }
+    #ftr-down {
+        padding-bottom: 10px;
+    }
+    .preloader img{
+        width: 220px;
+    }
+}
+/*================== medium device ============== */
+@media(min-width:768px ) and (max-width:991.98px){
+    .lang {
+        margin-right: 0px;
+    }
+    .usd {
+        margin-right: 0px;
+    }
+    .details {
+        margin-right: 10px;
+    }
+    .navbar-brand {
+        padding-top: 0px;
+        padding-bottom: 0px;
+    }
+    .navbar-expand-lg .navbar-nav .nav-link::before {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .navbar-expand-lg .navbar-nav .nav-link::after {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .search {
+        padding-top: 0px;
+        padding-bottom: 10px;
+    }
+    .banner-text {
+        padding-top: 80px;
+    }
+    .banner-text p {
+        padding-bottom: 60px;
+    }
+    #banner i {
+        margin-bottom: 0px;
+    }
+    .left {
+        left: 47%;
+        transform: translateX(-47%);
+    }
+    .right {
+        left: 53%;
+        transform: translateX(-53%);
+    }
+    .shipp-item {
+        border-right: none;
+    }
+    .special-item {
+        margin-bottom: 20px;
+    }
+    .img {
+        padding-top: 0px;
+        padding-bottom: 20px;
+    }
+    .left1 {
+        left: 47%;
+        transform: translateX(-47%);
+    }
+    .right1 {
+        left: 53%;
+        transform: translateX(-53%);
+    }
+    .team-img {
+        padding-bottom: 10px;
+    }
+    .team-text h6 {
+        padding-bottom: 25px;
+    }
+    #teammate .fnt-icon1 {
+        width: 40px;
+        height: 40px;
+        line-height: 40px;
+    }
+    .link-link i {
+        margin-top: 185px;
+        margin-bottom: 240px;
+    }
+    .four h5 {
+        text-align: left;
+    }
+    .follow-icon {
+        margin-bottom: 10px;
+    }
+    .ftr p {
+        padding-top: 0px;
+    }
+    #ftr-down {
+        padding-bottom: 10px;
+    }
+}
+/*================== large device ============== */
+@media(min-width:992px) and (max-width:1199.98px){
+    .navbar-nav {
+        padding-top: 0px;
+    }
+    .banner-text {
+        padding-top: 100px;
+    }
+    .overlay {
+        height: 50%;
+    }
+    .feature-icon i {
+        margin: 20px 12px;
+    }
+    .link-link i {
+        margin-top: 65px;
+        margin-bottom: 70px;
+    }
+    .follow-icon i {
+        width: 34px;
+        height: 34px;
+        line-height: 34px;
+    }
+}

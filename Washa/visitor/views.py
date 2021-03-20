@@ -10,6 +10,7 @@ from .models import newProduct
 from .models import LatestProduct
 from .models import testimonial
 from .models import My_blog
+from django.db.models import Q
 
 
 def home(request):
@@ -23,6 +24,35 @@ def home(request):
     latest_product = LatestProduct.objects.all()
     testimonialData = testimonial.objects.all()
     blog_data = My_blog.objects.all()
+    #for search:
+    search = request.GET.get('query')
+    if search:
+        feature_body = feature_body.filter(
+            Q(product_title__icontains= search)
+        )
+        latest_product = latest_product.filter(
+            Q(P_name__icontains = search)
+        )
+        specialData = specialData.filter(
+            Q(product_name__icontains = search)
+        ) 
+        #lll:
+        feature_head = feature_head.filter(
+            Q(header__icontains = search)
+        )
+        new_product = new_product.filter(
+            Q(header__icontains = search)
+        )
+        testimonialData = testimonialData.filter(
+            Q(header__icontains = search)
+        )
+        shipping = shipping.filter(
+            Q(header__icontains = search)
+        )
+        slider_data = slider_data.filter(
+            Q(Header__icontains = search)
+        )
+         
     global context
     context = {
         'datas':data,
