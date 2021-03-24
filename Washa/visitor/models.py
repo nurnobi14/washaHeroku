@@ -1,6 +1,6 @@
 from django.db import models
 from django.db.models import base
-from django.db.models.fields import DateTimeField
+from django.db.models.fields import CharField, DateTimeField
 from django.db.models.fields.files import ImageField
  
 
@@ -115,7 +115,15 @@ class My_blog(models.Model):
     
     def __str__(self) -> str:
         return self.title
- 
+    
+class Ordered_product(models.Model):
+    mail = models.CharField(max_length=50,blank=False) 
+    number = models.CharField(max_length=50,blank=False) 
+    product_Code = models.CharField(max_length=50,blank=False) 
+    location = models.CharField(max_length=50,blank=False) 
+    
+    def __str__(self) -> str:
+        return self.number
      
      
     

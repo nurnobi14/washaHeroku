@@ -10,6 +10,7 @@ from .models import newProduct
 from .models import LatestProduct
 from .models import testimonial
 from .models import My_blog
+from .models import Ordered_product
 from django.db.models import Q
 
 
@@ -28,7 +29,7 @@ def home(request):
     search = request.GET.get('query')
     if search:
         feature_body = feature_body.filter(
-            Q(product_title__icontains= search)
+            Q(product_title__icontains= search)|Q(product_code__icontains = search)
         )
         latest_product = latest_product.filter(
             Q(P_name__icontains = search)
@@ -67,6 +68,20 @@ def home(request):
         'Blogs' : blog_data
         
     }
+    #order data:
+    if request.method == "POST":
+        email = request.POST.get('email')
+        number = request.POST.get('Mobile')
+        p_code = request.POST.get('productCode')
+        address = request.POST.get('address')
+
+        orderData = Ordered_product(
+            mail =email,
+            number = number,
+            product_Code = p_code,
+            location = address,
+        )
+        orderData.save()
      
     return render(request,'index.html', context ) 
 

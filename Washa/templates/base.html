@@ -1,220 +1,214 @@
 {% load static %}
-
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="icon" href="{% static 'images/favicon.ico' %}" type="image/gif" sizes="16x16">
-    <title>{% block  title%}{% endblock  %}</title>
-    
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800" rel="stylesheet">
-    
-    <link href="https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,800,900" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Sacramento" rel="stylesheet"> 
-    <link rel="stylesheet" href="{% static 'css/all.min.css' %}">
-    <link rel="stylesheet" href="{% static 'css/slick.css' %}">
-    <link rel="stylesheet" href="{% static 'css/lightbox.min.css' %}">
-    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
-    <link rel="stylesheet" href="{% static 'css/style.css' %}">
-    <link rel="stylesheet" href="{% static 'css/media.css' %}">
-    <link rel="stylesheet" href="{% static 'css/registration.css' %}">
+	<head>
+		
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<link rel="icon" href="{% static 'images/favicon.ico' %}" type="image/gif" sizes="16x16">
+	<title>{% block  title%}{% endblock  %}</title>
+	
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800" rel="stylesheet">
+	
+	<link href="https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,800,900" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Sacramento" rel="stylesheet">
+	<link rel="stylesheet" href="{% static 'css/all.min.css' %}">
+	<link rel="stylesheet" href="{% static 'css/slick.css' %}">
+	<link rel="stylesheet" href="{% static 'css/lightbox.min.css' %}">
+	<link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+	<link rel="stylesheet" href="{% static 'css/style.css' %}">
+	<link rel="stylesheet" href="{% static 'css/media.css' %}">
+	<link rel="stylesheet" href="{% static 'css/registration.css' %}">
 </head>
 <body data-spy="scroll" data-target=".navbar" data-offset="50">
-        {% block preloader %}
-        
-        {% endblock  %}     
-            
-    <!-- ============================ top part start ===============================-->
-<section id="top">
-    <div class="container">
-        <div class="row mx-0">
-            <div class="col-lg-6 col-sm-6 col-md-6 px-0 text-left">
-                <div class="top-left">
-                 <div class="lang">
-                   <div class="dropdown">
-                       <h5>Eng</h5>
-                       <i class="fas fa-sort-down"></i>
-                       <div class="dropdown-content">
-                           <a href="#">Bangla</a>
-                           <a href="#">Hindi</a>
-                           <a href="#">Arabic</a>
-                       </div>
-                   </div>
-                   </div>
-                   <div class="usd">
-                        <div class="dropdown">
-                                <h5>USD</h5>
-                                <i class="fas fa-sort-down"></i>
-                                <div class="dropdown-content">
-                                    <a href="#">BDT</a>
-                                    <a href="#">RS</a>
-                                    
-                                </div>
-                            </div>
-                   </div>
-                   <h5>{{datas.0.number_title}} {{datas.0.number}}</h5>
-                </div>
-            </div>
-            
-            <div class="col-lg-6 col-sm-6 col-md-6 px-0 log text-right">
-                <div class="details">
-                   <a href="#"><i class="fas fa-heart"></i>
-                    <h5>Wishlist</h5></a> 
-                </div>
-                {% if user.is_authenticated %}
-                <div class="details">
-                
-                       <a href="{% url 'profile' %}"><i class="fas fa-user"></i>
-                      
-                        <h5>My Account</h5></a> 
-                  
-                    </div>
-                      {% else %} 
-                    {% block mylogin %}    
-                    <a href="{% url 'login' %}"><h5  class="text-primary">Login &nbsp;&nbsp;&nbsp;</h5></a>
-                    {% endblock  %}
-                   <a href="{% url 'regiteer' %}"><h5 class="text-warning">Register</h5></a> 
-                 {% endif %}
-            </div>
-        </div>
-    </div>
-</section>
-<!-- ============================ top part end ===============================-->
-<!-- ============================ menu part start ===============================-->
-<section id="menu">
-    <div class="container">
-        <div class="row mx-0">
-            <div class="col-lg-8 px-0">
-                <nav class="navbar navbar-expand-lg navbar-light ">
-                        <a class="navbar-brand" href="{% url 'home' %}"><img src="{{datas.0.logo.url}}" alt="logo" width="90" height="40"></a>
-                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                          <span class="navbar-toggler-icon"></span>
-                        </button>
-                      
-                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                          <ul class="navbar-nav ml-auto text-center">
-                            <li class="nav-item ">
-                              <a class="nav-link" href="{% url 'home' %}">Home <span class="sr-only">(current)</span></a>
-                            </li>
-                            <li class="nav-item">
-                              <a class="nav-link" href="{% url 'about' %}">About</a>
-                            </li>
-                            <li class="nav-item">
-                                    <a class="nav-link" href="{% url 'shop' %}">Shop</a>
-                            </li> 
-                            <li class="nav-item">
-                                    <a class="nav-link" href="{% url 'blog' %}">Blog</a>
-                            </li>
-                            <li class="nav-item">
-                                    <a class="nav-link" href="{% url 'contact' %}">Contact</a>
-                            </li>
-                            
-                          </ul>
-                          
-                        </div>
-                      </nav>
-                    </div>
-                <div class="col-lg-4 text-center px-0">
-                    {% block search_section %}
-                         <div class="search">
-                         <p class="text-danger text-capitalize">go to home page for any query</p>
-                    </div>
-                    {% endblock %}
-                             
-
-                    </div>
-                </div>    
-
-        </div>
-    </div>
+	{% block preloader %}
+		
+	{% endblock  %}
+	
+	<!-- ============================ top part start ===============================-->
+	<section id="top">
+		<div class="container">
+			<div class="row mx-0">
+				<div class="col-lg-6 col-sm-6 col-md-6 px-0 text-left">
+					<div class="top-left">
+						<div class="lang">
+							<div class="dropdown">
+								<h5>Eng</h5>
+								<i class="fas fa-sort-down"></i>
+								<div class="dropdown-content">
+									<a href="#">Bangla</a>
+									<a href="#">Hindi</a>
+									<a href="#">Arabic</a>
+								</div>
+							</div>
+						</div>
+						<div class="usd">
+							<div class="dropdown">
+								<h5>USD</h5>
+								<i class="fas fa-sort-down"></i>
+								<div class="dropdown-content">
+									<a href="#">BDT</a>
+									<a href="#">RS</a>
+									
+								</div>
+							</div>
+						</div>
+						<h5>{{datas.0.number_title}} {{datas.0.number}}</h5>
+					</div>
+				</div>
+				
+				<div class="col-lg-6 col-sm-6 col-md-6 px-0 log text-right">
+					<div class="details">
+						<a href="#"><i class="fas fa-heart"></i>
+						<h5>Wishlist</h5></a>
+					</div>
+					{% if user.is_authenticated %}
+						<div class="details">
+							
+							<a href="{% url 'profile' %}"><i class="fas fa-user"></i>
+								
+							<h5>My Account</h5></a>
+							
+						</div>
+					{% else %}
+						{% block mylogin %}
+							<a href="{% url 'login' %}"><h5  class="text-primary">Login &nbsp;&nbsp;&nbsp;</h5></a>
+						{% endblock  %}
+						<a href="{% url 'regiteer' %}"><h5 class="text-warning">Register</h5></a>
+					{% endif %}
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- ============================ top part end ===============================-->
+	<!-- ============================ menu part start ===============================-->
+	<section id="menu">
+		<div class="container">
+			<div class="row mx-0">
+				<div class="col-lg-8 px-0">
+					<nav class="navbar navbar-expand-lg navbar-light ">
+						<a class="navbar-brand" href="{% url 'home' %}"><img src="{{datas.0.logo.url}}" alt="logo" width="90" height="40"></a>
+						<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+						<span class="navbar-toggler-icon"></span>
+						</button>
+						 
+						<div class="collapse navbar-collapse" id="navbarSupportedContent">
+							<ul class="navbar-nav ml-auto text-center">
+								<li class="nav-item">
+									<a class="nav-link " href="{% url 'home' %}">Home <span class="sr-only">(current)</span></a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link  " href="{% url 'about' %}">About</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link " href="{% url 'shop' %}">Shop</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link " href="{% url 'blog' %}">Blog</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link " href="{% url 'contact' %}">Contact</a>
+								</li>
+							</ul>
+							
+						</div>
+						<!-- sript for auto selected by clink on menu -->
+						 
+						<!-- End sript for auto selected by clink on menu  -->
+						 
+					</nav>
+				</div>
+				<div class="col-lg-4 text-center px-0">
+					{% block search_section %}
+						<div class="search">
+							<p class="text-danger text-capitalize">go to home page for any query</p>
+						</div>
+					{% endblock %}
+					
+				</div>
+			</div>
+		</div>
+	</div>
 </section>
 <!-- ============================ menu part end ===============================-->
 {% block styles %}{% endblock  %}
 {% block  bodyContaint%}
-
 {% endblock  %}
-  
+
 <!-- ============================ footer part start ===============================-->
 <section id="footer" style="margin-top: 20px;">
-    <div class="container">
-        <div class="row mx-0">
-            <div class="col-lg-3 pl-0">
-                <div class="first">
-                    <img src="{{datas.0.logo.url}}" alt="logo2"  width="100" height="80">
-                    <p>{{datas.0.footerLogo_describ}}</p>
-                    <p id="first-p2">{{datas.0.footerLogo_describ_2}}</p>
-                </div>
-            </div>
-            <div class="col-lg-3 pl-0">
-                <div class="second">
-                    <h5>{{datas.0.footerContact_header}}</h5>
-                    <p><i class="fas fa-map-marker-alt"></i>{{datas.0.footerContact_location}}</p>
-                    <p><i class="fas fa-phone"></i>{{datas.0.footerContact_telePhone}}</p>
-                    <p><i class="fas fa-envelope"></i>{{datas.0.footerContact_mail}}</p>
-                    <p><i class="fas fa-globe-asia"></i>{{datas.0.footerContact_webSite}}</p>
-                </div>
-
-            </div>
-            <div class="col-lg-3 pl-0">
-                <div class="third">
-                    <h5>my account</h5>
-                    <p>my account</p>
-                    <p>wishlist</p>
-                    <p>shopping cart</p>
-                    <p>compare</p>
-                    <p>Checkout</p>
-                </div>
-            </div>
-            <div class="col-lg-3 pl-0">
-                <div class="four text-right">
-                    <h5>sign up for newsletter</h5>
-                   
-                    <input type="text" class="form-control " placeholder="Your Mail">
-                    <button class="btn">submit</button>
-                
-                    
-                </div>
-                <div class="follow">
-                    <h5>follow me on</h5>
-                    <div class="follow-icon">
-                        <a href="#"><i class="fab fa-facebook-f"></i></a>  
-                        <a href="#"><i class="fab fa-twitter"></i></a>  
-                        <a href="#"><i class="fab fa-pinterest-p"></i></a> 
-                        <a href="#"><i class="fab fa-behance"></i></a> 
-                        <a href="#"><i class="fab fa-linkedin-in"></i></a>  
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+<div class="container">
+	<div class="row mx-0">
+		<div class="col-lg-3 pl-0">
+			<div class="first">
+				<img src="{{datas.0.logo.url}}" alt="logo2"  width="100" height="80">
+				<p>{{datas.0.footerLogo_describ}}</p>
+				<p id="first-p2">{{datas.0.footerLogo_describ_2}}</p>
+			</div>
+		</div>
+		<div class="col-lg-3 pl-0">
+			<div class="second">
+				<h5>{{datas.0.footerContact_header}}</h5>
+				<p><i class="fas fa-map-marker-alt"></i>{{datas.0.footerContact_location}}</p>
+				<p><i class="fas fa-phone"></i>{{datas.0.footerContact_telePhone}}</p>
+				<p><i class="fas fa-envelope"></i>{{datas.0.footerContact_mail}}</p>
+				<p><i class="fas fa-globe-asia"></i>{{datas.0.footerContact_webSite}}</p>
+			</div>
+		</div>
+		<div class="col-lg-3 pl-0">
+			<div class="third">
+				<h5>my account</h5>
+				<p>my account</p>
+				<p>wishlist</p>
+				<p>shopping cart</p>
+				<p>compare</p>
+				<p>Checkout</p>
+			</div>
+		</div>
+		<div class="col-lg-3 pl-0">
+			<div class="four text-right">
+				<h5>sign up for newsletter</h5>
+				
+				<input type="text" class="form-control " placeholder="Your Mail">
+				<button class="btn">submit</button>
+				
+				
+			</div>
+			<div class="follow">
+				<h5>follow me on</h5>
+				<div class="follow-icon">
+					<a href="#"><i class="fab fa-facebook-f"></i></a>
+					<a href="#"><i class="fab fa-twitter"></i></a>
+					<a href="#"><i class="fab fa-pinterest-p"></i></a>
+					<a href="#"><i class="fab fa-behance"></i></a>
+					<a href="#"><i class="fab fa-linkedin-in"></i></a>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
 </section>
 <section id="ftr-down">
-    <div class="container">
-        <div class="row mx-0">
-            <div class="col-lg-6 col-12 col-sm-12 col-md-6 px-0 ftr">
-                <p>{{datas.0.copyRight}}<span class="text-warning"> {{datas.0.copyRightBy}}</span></p>
-            </div>
-            <div class="col-lg-6 col-12 col-sm-12 col-md-6 px-0  credit">
-                <img src="{% static 'images/credi.png' %}" alt="credit">
-            </div>
-        </div>
-    </div>
+<div class="container">
+	<div class="row mx-0">
+		<div class="col-lg-6 col-12 col-sm-12 col-md-6 px-0 ftr">
+			<p>{{datas.0.copyRight}}<span class="text-warning"> {{datas.0.copyRightBy}}</span></p>
+		</div>
+		<div class="col-lg-6 col-12 col-sm-12 col-md-6 px-0  credit">
+			<img src="{% static 'images/credi.png' %}" alt="credit">
+		</div>
+	</div>
+</div>
 </section>
 
-                                         
 <!-- ============================ footer part end ===============================-->
 <a href="#" class="back-to-top"><i class="fas fa-location-arrow"></i></a>
-
-
-
-    <script src="{% static 'js/jquery-1.12.4.min.js' %}"></script>
-    <script src="{% static 'js/slick.min.js' %}"></script>
-    <script src="{% static 'js/lightbox.min.js' %}"></script>
-    <script src="{% static 'js/isotope.pkgd.min.js' %}"></script>
-    <script src="{% static 'js/bootstrap.min.js' %}"></script>
-    <script src="{% static 'js/custom.js' %}"></script>
+<script src="{% static 'js/jquery-1.12.4.min.js' %}"></script>
+<script src="{% static 'js/slick.min.js' %}"></script>
+<script src="{% static 'js/lightbox.min.js' %}"></script>
+<script src="{% static 'js/isotope.pkgd.min.js' %}"></script>
+<script src="{% static 'js/bootstrap.min.js' %}"></script>
+<script src="{% static 'js/custom.js' %}"></script>
 </body>
 </html>

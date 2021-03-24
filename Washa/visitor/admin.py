@@ -10,6 +10,7 @@ from .models import newProduct
 from .models import LatestProduct 
 from .models import testimonial
 from .models import My_blog
+from .models import Ordered_product
 
 admin.site.register(Header_footerData)
 admin.site.register(slider_part)
@@ -21,4 +22,5 @@ admin.site.register(newProduct)
 admin.site.register(LatestProduct)
 admin.site.register(testimonial)
 admin.site.register(My_blog)
+admin.site.register(Ordered_product)
  
