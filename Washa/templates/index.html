@@ -105,6 +105,57 @@
     </div>
 </section>
 <section id="feature2">
+                            <!---poup windo-->
+                                <!--script link-->
+                                <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+                                <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+                                <script>
+                                $('#exampleModal').on('show.bs.modal', function (event) {
+                                var button = $(event.relatedTarget) // Button that triggered the modal
+                                var recipient = button.data('whatever') // Extract info from data-* attributes
+                                // If necessary, you could initiate an AJAX request here (and then do the updating in a callback).
+                                // Update the modal's content. We'll use jQuery here, but you could use a data binding library or other methods instead.
+                                var modal = $(this)
+                                modal.find('.modal-title').text('New message to ' + recipient)
+                                modal.find('.modal-body input').val(recipient)
+                                })
+                                </script>
+                                <!--script link-->
+                                 
+ 
+ 
+                                <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog" role="document">
+                                    <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="exampleModalLabel">New message</h5>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <form>
+                                        <div class="form-group">
+                                            <label for="recipient-name" class="col-form-label">Recipient:</label>
+                                            <input type="text" class="form-control" id="recipient-name">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="message-text" class="col-form-label">Message:</label>
+                                            <textarea class="form-control" id="message-text"></textarea>
+                                        </div>
+                                        </form>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                        <button type="button" class="btn btn-primary">Send message</button>
+                                    </div>
+                                    </div>
+                                </div>
+                                </div>
+
+                                
+
+                            <!---poup windo-->
     <div class="container">
         <div class="row mx-0">
             <div class="col-lg-12 text-center px-0">
@@ -125,15 +176,16 @@
                     <img src="{{ item.product_img.url }}" alt="women1" class="img-fluid w-100">
                     <div class="overlay1  ">
                         <div class="feature-icon text-center">
-                            <a href="#"><i class="fas fa-heart"></i></a>
-                            <a href="#"><i class="fas fa-random"></i></a>
-                            <a href="#"><i class="fas fa-shopping-basket"></i></a>
+                            <a title="add to favourite" href="#"><i class="fas fa-heart"></i></a>
+                            <a title="random" href="#"><i class="fas fa-random"></i></a>
+                            <a title="place Order" type="button" class="btn btn-lg" data-toggle="modal" data-target="#exampleModal"><i class="fas fa-shopping-basket"></i></a>
+                            
                         </div>
                     </div>
                 </div>
                 <div class="row mx-0">
                     <div class="col-lg-6 px-0">
-                        <h5>{{ item.product_title }}</h5>
+                        <h5>{{ item.product_title }} <p class="text-danger">P code: <mark>{{ item.product_code }}</mark></p> </h5>
                     </div>
                     <div class="col-lg-6 px-0 text-right">
                         <h6>{{ item.product_price }}</h6>

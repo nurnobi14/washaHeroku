@@ -155,7 +155,7 @@ $('.button-group').each( function( i, buttonGroup ) {
       hour = minute * 60,
       day = hour * 24;
 
-let countDown = new Date('Jul 21, 2022 00:00:00').getTime(),
+let countDown = new Date('Dec 21, 2022 00:00:00').getTime(),
     x = setInterval(function() {
 
       let now = new Date().getTime(),

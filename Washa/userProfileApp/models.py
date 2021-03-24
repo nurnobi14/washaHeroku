@@ -38,6 +38,7 @@ class FormLayout(models.Model):
     RegisterTitle = models.CharField(max_length=50,blank=False)
 
 class allRegister(models.Model):
+    first_name = models.CharField(max_length=50,blank=True)
     userName = models.CharField(max_length=50,blank=True)
     userMail = models.CharField(max_length=50,blank=True)
     userPass = models.CharField(max_length=50,blank=True)

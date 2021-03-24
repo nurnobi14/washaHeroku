@@ -45,6 +45,7 @@ def authlogin(request):
 def userRegister(request):
     if request.method == "POST":
         
+        first_name =  request.POST.get('first_name')
         names =  request.POST.get('username')
         mails =  request.POST.get('email')
         pass1 =  request.POST.get('password1')
@@ -52,6 +53,7 @@ def userRegister(request):
         #messages.success(request,'registration successfully')
         
         UserData = allRegister(
+            first_name = first_name,
             userName = names,
             userMail =  mails,
             userPass =  pass1,
@@ -72,7 +74,7 @@ def userRegister(request):
             elif User.objects.filter(email=email).exists():
                 messages.warning(request,'This Email already exist') 
             else:
-                user=User.objects.create_user(username=username,password=password,email=email)
+                user=User.objects.create_user(username=username,password=password,email=email,first_name = first_name)
                 user.save()  
                 messages.success(request,'registration successfully')
                 return redirect('login')     
@@ -136,7 +138,11 @@ def userRegister(request):
     return render(request,'repass.html',context)
 
 def Userprofile(request):
-    return render(request,'profile.html')
+    if request.user.is_authenticated:
+        return render(request, 'profile.html')
+    else:
+        return redirect('login')
+    #return render(request,'profile.html')
 
 def Userlogout(request):
     logout(request)

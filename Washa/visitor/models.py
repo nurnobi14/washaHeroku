@@ -64,6 +64,7 @@ class feature_product(models.Model):
     product_img = models.ImageField(upload_to="feature_images/")
     product_title = models.CharField(max_length=50 ,blank=False)        
     product_price = models.CharField(max_length=50,blank=False)
+    product_code = models.CharField(max_length=50,blank=False,default="")
 
 
 #microsoft part now:
