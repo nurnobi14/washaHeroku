@@ -10,7 +10,7 @@
 {% block search_section %}
                         <div class="search">
                         <form action="" method="GET">
-                            <input type="text" class="form-control" name="query" value="{{ request.GET.query }}">
+                            <input type="text" class="form-control" name="query" onfocus="this.placeholder=''" placeholder="{{ request.GET.query }}">
                             <button  type="submit"><i class="fas fa-search"></i></button> 
                         </form>
                     </div>
@@ -194,7 +194,7 @@
                         <div class="feature-icon text-center">
                             <a title="add to favourite" href="#"><i class="fas fa-heart"></i></a>
                             <a title="random" href="#"><i class="fas fa-random"></i></a>
-                            <a title="place Order" onclick="myFunction()" type="button" class="btn btn-lg" data-toggle="modal" data-target="#exampleModal"><i class="fas fa-shopping-basket"></i></a>
+                            <a title="place Order" onclick="myFunction()" type="button" data-toggle="modal" data-target="#exampleModal"><i class="fas fa-shopping-basket"></i></a>
                             
                         </div>
                     </div>
