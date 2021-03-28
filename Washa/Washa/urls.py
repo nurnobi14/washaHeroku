@@ -13,7 +13,7 @@ admin.site.site_title = 'dhashboard'
 #from django.contrib.auth import views as auth_views
  
 urlpatterns = [
-    path('admin/', admin.site.urls),
+    path('myadmin/', admin.site.urls),
     path('',include('visitor.urls')),
     path('',include('about_apps.urls')),
     path('',include('shop_apps.urls')),
@@ -21,6 +21,8 @@ urlpatterns = [
     path('',include('contact_apps.urls')),
     path('',include('userProfileApp.urls')),
 ]+static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)
+
+handler404 = 'visitor.views.error_404_view'
 
 
 

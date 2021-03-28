@@ -85,7 +85,8 @@ def home(request):
      
     return render(request,'index.html', context ) 
 
-
+def error_404_view(request,exception):
+    return render(request,'404.html')
 
 #def about(request):
     return render(request,'about.html',context)
