@@ -1,0 +1,1495 @@
+*{
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    
+
+}
+a{
+    text-decoration: none;
+
+}
+ul,ol{
+    list-style-type: none;
+}
+img{
+    vertical-align: middle;
+}
+.clr{
+    clear: both;
+}
+
+body,
+html{
+    scroll-behavior: smooth;
+}
+/* =========================== top part css ==========================*/
+#top{
+    background: #444444;
+}  
+
+.dropdown{
+    position: relative;
+    display: inline-block;
+}
+.dropdown h5{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    color: #fff;
+    cursor: pointer;
+    
+}
+.dropdown i{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 30px;
+    top: 4px;;
+    font-size: 14px;
+    color: #fff;
+    cursor: pointer;
+}
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    
+  }
+  
+  .dropdown-content a {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    color: black;
+    padding: 12px 16px;
+    display: block;
+  }
+  .dropdown:hover .dropdown-content{
+      display: block;
+      
+  }
+  .dropdown:hover .dropdown-content a{
+      text-decoration: none;
+      
+  }
+  .lang{
+      display: inline-block;
+      width: 53px;
+      
+      margin-right: 20px;
+      padding: 19px 0px;;
+
+  }
+  .usd{
+      display: inline-block;
+    width: 53px;
+    
+    margin-right: 20px;
+    padding: 19px 0;
+}
+.top-left h5{
+    display: inline-block;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    color: #fff;
+}
+.details{
+    display: inline-block;
+    width: 104px;
+    padding: 19px 0;
+    margin-right: 20px;
+   
+    padding-right: 8px;
+}
+.details i{
+    color: #fff;
+}
+.details h5{
+    display: inline-block;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    color: #fff;
+}
+.log h5{
+    display: inline-block;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    color: #fff;
+}
+
+/* =========================== menu part css ==========================*/
+.navbar-brand {
+    padding-top: 20px;
+    padding-bottom: 24px;
+}
+
+.navbar-expand-lg .navbar-nav .nav-link {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    color: #222222;
+    position: relative;
+
+}
+.navbar-expand-lg .navbar-nav .nav-link::after{
+    position: absolute;
+    content: '';
+    width: 0;
+    height: 1px;
+    bottom: 0;
+    left: 8px;
+    background: #de4644;
+    opacity: 0;
+    transition: all linear .4s;
+
+}
+.navbar-expand-lg .navbar-nav .nav-link::before{
+    position: absolute;
+    content: '';
+    width: 0;;
+    height: 1px;
+    bottom: -2px;;
+    left: 8px;
+    background: #de4644;
+    opacity: 0;
+    transition: all linear .4s;
+
+}
+.navbar-light .navbar-nav .nav-link:hover {
+    color: #de4644;
+    
+}
+.navbar-expand-lg .navbar-nav .nav-link:hover::after{
+    opacity: 1;
+    width: 23px;
+}
+.navbar-expand-lg .navbar-nav .nav-link:hover::before{
+    opacity: 1;
+    width: 11px;
+}
+.search{
+    padding-top: 30px;
+}
+.search .form-control{
+    display: inline-block;
+    width: 150px;
+}
+.search i{
+    font-size: 20px;
+    color: darkgoldenrod;
+}
+.form-control:focus {
+	color: #495057;
+	background-color: #fff;
+	border-color: #de4644;
+	outline: 0;
+	box-shadow: none;
+}
+button {
+	
+	background: none;
+    border: none;
+    margin-right: 38px;
+}
+.search .bag{
+    color: #222222;
+    padding-right: 10px;
+}
+.search h5{
+    display: inline-block;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    color: #222222;
+}
+.shop{
+    display: inline-block;
+    position: relative;
+}
+.shop-item{
+    visibility: hidden;
+    position: absolute;
+    z-index: 999;
+    width: 100px;
+    background: #fff;
+    transition: all linear.3s;
+}
+.shop:hover .shop-item{
+    visibility: visible;
+    transition: all linear.3s;
+}
+.shop:hover .bag{
+    color: #de4644;
+}
+.shop:hover h5{
+    color: #de4644;
+}
+
+/* =========================== banner part css ==========================*/
+
+.bslider-item{
+    background-repeat: no-repeat!important;
+    background-position: center!important;
+    background-size: cover!important;
+    
+    
+    position: relative;
+    
+}
+.bslider-item::after{
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.712);
+    left: 0;
+    top: 0;
+}
+.banner-text{
+    position: relative;
+    z-index: 9;
+    padding-top: 150px;
+}
+.banner-text h3{
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+    font-size: 70px;
+    color: #de4644;
+    margin-bottom: 0;
+}
+.banner-text h4{
+    text-transform: uppercase;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 400;
+    font-size: 40px;
+    color: #fff;
+}
+.banner-text p{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    color: #fff;
+    line-height: 24px;
+    padding-top: 4px;
+    padding-bottom: 80px;
+    margin-bottom: 0;
+}
+.banner-text a{
+    padding: 20px 20px;
+    border: 1px solid #fff;
+    border-radius: 3px;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    color: #fff;
+    text-transform: uppercase;
+    margin-right: 25px;
+    
+}
+
+.banner-text a:hover{
+    text-decoration: none;
+    background: #de4644;
+    border: 1px solid #de4644;
+    transition: all linear.3s;
+    
+}
+.a-button{
+    padding-bottom: 110px;
+}
+#banner{
+    position: relative;
+}
+#banner i{
+    
+    width: 30px;
+    height: 30px;
+    border: 1px solid #fff;
+    color: #fff;
+    text-align: center;
+    line-height: 30px;
+    margin-bottom: 40px;
+}
+#banner i:hover{
+    background: #de4644;
+    border:1px solid #de4644;
+    transition: all linear .3s;
+}
+.left{
+    position: absolute;
+    left: 48%;
+    transform: translateX(-48%);
+    bottom: 20px;
+    z-index: 99;
+}
+.right{
+    position: absolute;
+    left: 52%;
+    transform: translateX(-52%);
+    bottom: 20px;
+    z-index: 99; 
+}
+/* =========================== shipping part css ==========================*/
+#shipping{
+    padding-top: 30px;
+    padding-bottom: 30px;
+    background: #f1f1f1;
+}
+.shipp-item{
+    border-right: 1px dotted #222222;
+}
+.shipp-item i{
+    font-size: 18px;
+}
+.shipp-item h5{
+    display: inline-block;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    color: #222222;
+    text-transform: capitalize;
+    padding-bottom: 30px;
+    margin-bottom: 0;
+
+}
+.shipp-item p{
+    color: #444444;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+}
+.br{
+    border-right: 0;
+}
+.shipp-item:hover i {
+    color: #de4644;
+}
+.shipp-item:hover h5 {
+    color: #de4644;
+}
+/* =========================== special part css ==========================*/
+#special{
+    padding-top: 100px;
+}
+.special-item{
+    position: relative;
+    overflow: hidden;
+}
+.overlay {
+	position: absolute;
+	width: 90%;
+	height: 40%;
+	background: rgba(0, 0, 0, 0.795);
+	bottom: -40px;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: all linear.4s;
+    
+    
+}
+.overlay h3{
+    
+    font-family: 'Raleway', sans-serif;
+    font-weight: 500;
+    font-size: 36px;
+    color: #fff;
+    text-transform: capitalize;
+
+}
+.overlay h4{
+    
+    font-family: 'Raleway', sans-serif;
+    font-weight: 500;
+    font-size: 24px;
+    color: #fff;
+    text-transform: capitalize;
+    padding-bottom: 10px;
+}
+.overlay a{
+    
+    font-family: 'Raleway', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    color: #fff;
+    text-transform: capitalize;
+    padding: 15px 15px ;
+    border: 1px solid #fff;
+    border-radius: 3px;
+}
+.overlay a:hover{
+    text-decoration: none;
+   
+    
+}
+.overlay:hover a{
+    background: #de4644;
+    border: 1px solid #de4644;
+    transition: all linear.3s;
+}
+.special-item:hover .overlay{
+    opacity: 1;
+    transition: all linear.4s;
+    bottom: 20px;
+}
+/* =========================== feature part css ==========================*/
+#feature{
+    padding-top: 100px;
+    
+}
+.feature-text h3{
+    font-family: 'Raleway', sans-serif;
+    font-weight: 500;
+    font-size: 40px;
+    color: #222222;
+    text-transform: capitalize;
+    margin-bottom: 0;
+    position: relative;
+    display: inline-block;
+    padding-bottom: 85px;
+}
+.feature-text h3::before{
+    position: absolute;
+    content: '';
+    width: 172px;
+    height: 1px;
+    background: #de4644;
+    left: 0;
+    top: 60px;
+}
+.feature-text h3::after{
+    position: absolute;
+    content: '';
+    width: 86px;
+    height: 1px;
+    background: #de4644;
+    left: 0;
+    top: 65px;
+}
+#feature2{
+    padding-bottom: 100px;
+}
+.catagories .button{
+    font-family: 'Raleway', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    color: #444444;
+    text-transform: capitalize;
+    padding: 0 20px;
+    margin-right: 0;
+    border-right: 1px solid #222222;
+    margin-bottom: 30px;
+}
+.catagories .acc{
+    border-right: none;
+}
+.catagories .button:hover{
+    color: #de4644;
+}
+
+.product{
+    position: relative;
+    overflow: hidden;
+}
+.overlay1{
+    position: absolute;
+    width: 35%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.788);
+    right: -30px;
+    top: 0;
+    opacity: 0;
+    transition: all linear .3s;
+    
+}
+.feature-icon{
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+
+    
+}
+.feature-icon i{
+    width: 50px;
+    height: 50px;
+    background: transparent;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    line-height: 50px;
+    font-size: 24px;
+    color: #fff;
+    margin: 30px 20px;
+   
+    
+    
+}
+.overlay1 .feature-icon i:hover {
+    background: #de4644;
+    border: 1px solid #de4644;
+    transition: all linear .3s;
+}
+.product:hover .overlay1{
+    opacity: 1;
+    transition: all linear.3s;
+    right: 0;
+}
+.element-item h5{
+    display: inline-block;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    color: #222222;
+    text-transform: capitalize;
+}
+.element-item h6{
+    display: inline-block;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    color: #222222;
+    text-transform: capitalize;
+}
+.element-item .star{
+    color: #de4644;
+}
+/* =========================== microsoft part css ==========================*/
+#microsoft{
+    padding-top: 45px;
+    background: #f1f1f1;
+    padding-bottom: 45px;
+}
+.img{
+    padding-top: 30px;
+}
+.micro-text h5{
+    font-family: 'Raleway', sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+    color: #222222;
+    text-transform: uppercase;
+    margin-bottom: 0;
+}
+.micro-text h3{
+    font-family: 'Raleway', sans-serif;
+    font-weight: 500;
+    font-size: 40px;
+    color: #de4644;
+    text-transform: uppercase;
+}
+.micro-text p{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    color: #444444;
+    line-height: 24px;
+    
+}
+.launch{
+    padding-bottom: 30px;
+}
+.count-item {
+    width: 80px;
+    height: 70px;
+    border: 1px solid #222222;
+    margin-right: 30px;
+    
+    
+}
+.count-item  h4{
+    font-family: 'Raleway', sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+    color: #444;
+    padding-top: 5px;
+}
+.count-item  h6{
+    font-family: 'Raleway', sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+    color: #444;
+    text-transform: capitalize;
+}
+/* =========================== latest part css ==========================*/
+#latest{
+    padding-top: 100px;
+}
+.latest-text h3{
+    font-family: 'Raleway', sans-serif;
+    font-weight: 500;
+    font-size: 40px;
+    color: #222222;
+    text-transform: capitalize;
+    margin-bottom: 0;
+    position: relative;
+    display: inline-block;
+    padding-bottom: 90px;
+}
+
+.latest-text h3::before{
+    position: absolute;
+    content: '';
+    width: 147px;
+    height: 1px;
+    background: #de4644;
+    left: 0;
+    top: 60px;
+}
+.latest-text h3::after{
+    position: absolute;
+    content: '';
+    width: 75px;
+    height: 1px;
+    background: #de4644;
+    left: 0;
+    top: 65px;
+}
+.mobile-item{
+    position: relative;
+    overflow: hidden;
+}
+.overlay2{
+    position: absolute;
+    width: 35%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.788);
+    right: -30px;
+    top: 0;
+    opacity: 0;
+    transition: all linear .3s;
+    padding-top: 40px;
+}
+.mobile-icon{
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.mobile-icon i{
+    width: 50px;
+    height: 50px;
+    background: transparent;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    line-height: 50px;
+    font-size: 30px;
+    color: #fff;
+    margin-bottom: 30px;
+    font-size: 24px;
+    color: #fff;
+}
+.overlay2 .mobile-icon i:hover{
+    background: #de4644;
+    border: 1px solid #de4644;
+    transition: all linear .3s;
+}
+.mobile-item:hover .overlay2{
+    opacity: 1;
+    transition: all linear.3s;
+    right: 0;
+}
+.mobile-part h5{
+    display: inline-block;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    color: #222222;
+    text-transform: capitalize;
+}
+.mobile-part h6{
+    display: inline-block;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    color: #222222;
+    text-transform: capitalize;
+}
+.mobile-part .star{
+    color: #de4644;
+}
+#mobile{
+    position: relative;
+}
+#mobile .fnt-icon{
+    
+    width: 30px;
+    height: 30px;
+    border: 1px solid #222222;
+    color: #222222;
+    text-align: center;
+    line-height: 30px;
+    
+}
+#mobile .fnt-icon:hover{
+    background: #de4644;
+    border:1px solid #de4644;
+    transition: all linear .3s;
+    color: #fff;
+}
+.left1{
+    position: absolute;
+    left: 48%; 
+    transform: translateX(-48%);
+    bottom: -55px;
+}
+.right1{
+    position: absolute;
+    left: 52%; 
+    transform: translateX(-52%);
+    bottom: -55px;
+     
+}
+/* =========================== testimonial part css ==========================*/
+#test{
+    padding-top: 170px;
+}
+.test-text h3{
+    font-family: 'Raleway', sans-serif;
+    font-weight: 500;
+    font-size: 40px;
+    color: #222222;
+    text-transform: capitalize;
+    margin-bottom: 0;
+    position: relative;
+    display: inline-block;
+    padding-bottom: 90px;
+}
+
+.test-text h3::before{
+    position: absolute;
+    content: '';
+    width: 108px;
+    height: 1px;
+    background: #de4644;
+    left: 0;
+    top: 60px;
+}
+.test-text h3::after{
+    position: absolute;
+    content: '';
+    width: 55px;
+    height: 1px;
+    background: #de4644;
+    left: 0;
+    top: 65px;
+}
+#teammate{
+    background: url("../images/teambanner.a73c98e9f0ec.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    
+    padding-top: 60px;
+    padding-bottom: 140px;
+    position: relative;
+    background-attachment: fixed;
+}
+#teammate::after{
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.719);
+    left: 0;
+    top: 0;
+}
+.team-content{
+    position: relative;
+    z-index: 99;
+}
+
+                         /* team-img */
+
+.team-img {
+    height: 131.25px;
+    /* background: red; */
+    border-radius: 50%;
+    width: 131.25px;
+    padding: 0;
+}
+.team-img img{
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+}
+.team-text h5{
+    font-family: 'Raleway', sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    color: #fff;
+    margin-bottom: 0;
+}
+.team-text h6{
+    font-family: 'Raleway', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    color: #fff;
+    margin-bottom: 0;
+    padding-bottom: 50px;
+}
+.team-text p{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    color: #fff;
+    margin-bottom: 0;
+    padding-bottom: 30px;
+    
+}
+.sign h4{
+    font-family: 'Sacramento', cursive;
+    font-size: 30px;
+    color: #fff;
+
+
+}
+.team-slide{
+    z-index: 999;
+}
+#teammate .fnt-icon1{
+    
+    width: 50px;
+    height: 50px;
+    border: 1px solid #fff;
+    color: #fff;
+    text-align: center;
+    line-height: 50px;
+    font-size: 20px;
+    
+    
+}
+#teammate .fnt-icon1:hover{
+    background: #de4644;
+    border:1px solid #de4644;
+    transition: all linear .3s;
+    color: #fff;
+}
+
+.left2{
+    position: absolute;
+    left: 47%;
+    transform: translateX(-47%);
+    bottom: 65px;
+    z-index: 999;
+
+}
+.right2{
+    position: absolute;
+    left: 53%;
+    transform: translateX(-53%);
+    bottom: 65px;
+    z-index: 999;
+}
+/* =========================== blog part css ==========================*/
+#blog{
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+.blog-text  h3{
+    font-family: 'Raleway', sans-serif;
+    font-weight: 500;
+    font-size: 40px;
+    color: #222222;
+    text-transform: capitalize;
+    margin-bottom: 0;
+    position: relative;
+    display: inline-block;
+    padding-bottom: 90px;
+}
+
+.blog-text h3::before{
+    position: absolute;
+    content: '';
+    width: 83px;
+    height: 1px;
+    background: #de4644;
+    left: 0;
+    top: 60px;
+}
+.blog-text h3::after{
+    position: absolute;
+    content: '';
+    width: 43px;
+    height: 1px;
+    background: #de4644;
+    left: 0;
+    top: 65px;
+}
+.blog-img{
+    position: relative;
+    margin-bottom: 30px;
+
+}
+.overlay3{
+    position: absolute;
+    width: 100%;
+    height: 0%;
+    background: rgba(0, 0, 0, 0.651);
+    left: 0;
+    top: 0;
+    opacity: 0;
+    transition: all linear .4s;
+}
+
+.calender i{
+    color: #fff;
+    padding-left: 25px;
+}
+.calender h5{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    color: #fff;
+    display: inline-block;
+    text-transform: capitalize;
+}
+.link-link i {
+    width: 40px;
+    height: 40px;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    color: #fff;
+    line-height: 40px;
+    margin-top: 105px;
+    margin-bottom: 80px;
+    
+}
+.link-link i:hover{
+    background: #de4644;
+    border: 1px solid #de4644;
+    transition: all linear .3s;
+
+}
+.admin i{
+    color: #fff;
+    
+}
+.admin h5{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    color: #fff;
+    display: inline-block;
+    text-transform: capitalize; 
+    
+}
+.like i{
+    color: #fff;
+}
+.like h5{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    color: #fff;
+    display: inline-block;
+    text-transform: capitalize;
+}
+.comment i{
+    color: #fff;
+}
+.comment h5{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    color: #fff;
+    display: inline-block;
+    text-transform: capitalize;
+}
+.blog-img:hover .overlay3{
+    opacity: 1;
+    height: 100%;
+    transition: all linear .4s;
+}
+.blog-item{
+    margin-bottom: 25px;
+}
+.blog-item h4{
+    font-family: 'Raleway', sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    color: #222222;
+    padding-bottom: 30px;
+    margin-bottom: 0;
+}
+.blog-item p{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    color: #222222;
+    line-height: 24px;
+    margin-bottom: 0;
+    padding-bottom: 30px;
+    
+}
+.blog-item a{
+    font-family: 'Raleway', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    color: #222222;
+    
+
+}
+.blog-item a:hover{
+    text-decoration: none;
+    color: #de4644;
+    transition: all linear .3s;
+}
+/* =========================== footer part css ==========================*/
+#footer{
+    padding-top: 60px;
+    background: #353535;
+    
+}
+.first img{
+    padding-bottom: 30px;
+
+}
+.first p{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    color: #fff;
+    line-height: 24px;
+    padding-bottom: 40px;
+    margin-bottom: 0;
+}
+.first #first-p2{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    color: #fff;
+    line-height: 24px;
+}
+.second h5{
+    font-family: 'Raleway', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    color: #fff;
+    text-transform: uppercase;
+    padding-top: 10px;
+    padding-bottom: 50px;
+    margin-bottom: 0;
+}
+.second i{
+    color: #fff;
+    margin-right: 10px;
+    font-size: 13px;
+
+}
+.second p{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    color: #fff;
+    cursor: pointer;
+    transition: all linear.4s;
+}
+.second p:hover{
+    color: #de4644;
+    padding-left: 10px;
+    transition: all linear.4s;
+}
+.third h5{
+    font-family: 'Raleway', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    color: #fff;
+    text-transform: uppercase;
+    padding-top: 10px;
+    padding-bottom: 50px;
+    margin-bottom: 0;
+}
+.third p{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    color: #fff;
+    cursor: pointer;
+    transition: all linear.4s;
+    text-transform: capitalize;
+}
+.third p:hover{
+    color: #de4644;
+    padding-left: 10px;
+    transition: all linear.4s;
+}
+
+.four h5{
+    font-family: 'Raleway', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    color: #fff;
+    text-transform: uppercase;
+    padding-top: 10px;
+    margin-bottom: 0;
+    padding-bottom: 30px;
+}
+.four input{
+    background: transparent;
+    border: 1px solid #fff;
+    border-radius: 0;
+    width: 100%;
+    margin-bottom: 10px;
+    
+    
+    
+   
+
+}
+.four .btn{
+    
+    margin-right: 0;
+    display: inline-block;
+    background: #de4644;
+    border-radius: 0;
+    font-family: 'Raleway', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    color: #fff;
+    text-transform: uppercase;
+    line-height: 1.7;
+    margin-bottom: 30px;
+}
+.four input::placeholder{
+   
+    font-family: 'Raleway', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    color: #fff;
+    font-style: italic;
+}
+.follow h5{
+    font-family: 'Raleway', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    color: #fff;
+    text-transform: uppercase;
+    padding-bottom: 30px;
+    margin-bottom: 0;
+}
+.follow-icon i{
+    width: 40px;
+    height: 40px;
+    background: #fff;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 40px;
+    margin-right: 5px;
+    color: #222222;
+    transition: all linear .3s;
+    transform: scale(1);
+
+
+}
+.follow-icon i:hover{
+    background: #de4644;
+    color: #fff;
+    transition: all linear .3s;
+    transform: scale(1.2);
+}
+#ftr-down{
+    background: #555555;
+    padding-top: 10px;
+    padding-bottom: 20px;
+
+}
+.ftr p{
+    font-family: 'Raleway', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    color: #fff; 
+    padding-top: 15px;
+    margin-bottom: 0;
+}
+.ftr span{
+    color: #de4644;
+}
+.credit{
+    text-align: right;
+}
+/* ====================== back to top ======================*/
+.back-to-top{
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+
+
+}
+.back-to-top i{
+    width: 40px;
+    height: 40px;
+    font-size: 15px;
+    background: #de4644;
+    color: #fff;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 40px;
+    transform: rotate(-45deg);
+}
+.menufixed{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #fff;
+    z-index: 9999;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.36);
+}
+/*=========================== Preloader ============================ */
+.preloader{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 99999;
+    background: #fffbf5;
+}
+.preloader img{
+    width: 250px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+}
+/*==================================================================
+============================== About ===============================
+==================================================================== */
+#about-banner{
+    background: url("../images/about-banner.92ac74b9db94.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding-top: 80px;
+    padding-bottom: 80px;
+    position: relative;
+}
+#about-banner::after{
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: #3d3d3d80;
+
+}
+.about-banner-text{
+    position: relative;
+    z-index: 9;
+}
+.about-banner-text h3{
+    font-family: 'Raleway', sans-serif;
+    font-size: 24px;
+    font-weight: 500;
+    color: #fff;
+    text-transform: uppercase;
+    padding-bottom: 16px;
+    margin-bottom: 0;
+
+}
+.about-banner-text h4{
+    font-family: 'Raleway', sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    color: #fff;
+    text-transform: capitalize;
+    margin-bottom: 0;
+    
+}
+.about-banner-text h4 span{
+    color: #de4644;
+}
+.about-banner-text h4 i{
+    padding-left: 5px;
+    padding-right: 5px;
+    font-size: 18px;
+}
+/*======================= about us story part css =================== */
+#about-story{
+    padding-top: 100px;
+    padding-bottom: 100px;
+
+}
+.story-content{
+    position: relative;
+}
+.story-text{
+    display: inline-block;
+    width: 570px;
+    height: 400px;
+    background: #191919e0;
+    position: absolute;
+    left: 50%;
+    top: 50px;
+}
+
+.story-text p{
+    color: #fff;
+    padding: 60px 30px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 24px;
+
+}
+/*========================== about counter ================================*/
+#about-counter{
+    padding-top: 40px;
+    padding-bottom: 40px;
+    background: url("../images/about-counter.ea0db7721189.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.count{
+    text-align: center;
+}
+.count h4{
+    font-family: 'Raleway', sans-serif;
+    font-size: 40px;
+    font-weight: 500;
+    color: #fff;
+}
+.count h5{
+    font-family: 'Raleway', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    color: #fff;
+    text-transform: capitalize ;
+}
+/*========================== about designer part css ======================*/
+#designer{
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+.designer-text h3{
+    font-family: 'Raleway', sans-serif;
+    font-weight: 500;
+    font-size: 40px;
+    color: #222222;
+    text-transform: capitalize;
+    margin-bottom: 0;
+    position: relative;
+    display: inline-block;
+    padding-bottom: 85px;
+}
+.designer-text h3::before{
+    position: absolute;
+    content: '';
+    width: 172px;
+    height: 1px;
+    background: #de4644;
+    left: 0;
+    top: 60px;
+}
+.designer-text h3::after{
+    position: absolute;
+    content: '';
+    width: 86px;
+    height: 1px;
+    background: #de4644;
+    left: 0;
+    top: 65px;
+}
+.card-body h4{
+    font-family: 'Raleway', sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+    text-transform: capitalize;
+}
+.card-body h5{
+    font-family: 'Raleway', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    text-transform: capitalize;
+}
+.designer_card img{
+    height: 205px;
+    width: 100%;
+}
+/*==================================================================
+============================== Blog ===============================
+==================================================================== */
+#blog-content{
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+/*==================================================================
+============================== Contact ===============================
+==================================================================== */
+/*=========================== contact page ============================ */
+#form{
+    padding: 100px;
+}
+.form-row{
+    margin-bottom: 20px;
+    border-radius: none;
+}
+.form-row input{
+    border-radius: 0;
+}
+#exampleFormControlTextarea1{
+    border-radius: 0;
+}
+.btnnn{
+    padding: 10px 25px;
+    margin-top: 25px;
+    margin-right: 0;
+    background: #de4644;
+    border-radius: 0;
+    color: #fff;
+    
+}
+.btnnn:hover{
+    color: #fff;
+}
+.cform h3{
+    margin-bottom: 30px;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+    
+}
+.cinfod{
+    display: flex;
+}
+.cinfo h3{
+    font-family: 'Raleway', sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    color: #444444;
+    padding-bottom: 20px;
+    
+}
+.cinfo p {
+	font-family: 'Open Sans', sans-serif;
+	font-size: 14px;
+	color: #444444;
+	line-height: 24px;
+	padding-bottom: 10px;
+}
+.cinfo2 p {
+	font-family: 'Open Sans', sans-serif;
+	font-size: 14px;
+	color: #444444;
+	line-height: 24px;
+	padding-bottom: 10px;
+}
+.cinfo2 p i{
+    padding-right: 20px;
+}
+
+/* for manu selected by click */
+ 
+
+
+
+
+
+
+
+
