@@ -8,10 +8,14 @@ from .models import FormLayout
 from .models import allRegister 
  
  
+ 
+ 
 
 # Register your models here.
 admin.site.register(Header_footerData)
 admin.site.register(bannarLayout)
 admin.site.register(FormLayout)
 admin.site.register(allRegister)
+ 
+ 
  

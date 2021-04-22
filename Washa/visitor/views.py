@@ -12,6 +12,8 @@ from .models import testimonial
 from .models import My_blog
 from .models import Ordered_product
 from django.db.models import Q
+ 
+ 
 
 
 def home(request):
@@ -32,10 +34,10 @@ def home(request):
             Q(product_title__icontains= search)|Q(product_code__icontains = search)
         )
         latest_product = latest_product.filter(
-            Q(P_name__icontains = search)
+            Q(P_name__icontains = search)|Q(product_code__icontains = search)
         )
         specialData = specialData.filter(
-            Q(product_name__icontains = search)
+            Q(product_name__icontains = search)|Q(product_code__icontains = search)
         ) 
         #lll:
         feature_head = feature_head.filter(
@@ -83,24 +85,17 @@ def home(request):
         )
         orderData.save()
      
-    return render(request,'index.html', context ) 
+    return render(request,'index.html', context) 
+
+ 
 
 def error_404_view(request,exception):
     return render(request,'404.html')
 
-#def about(request):
-    return render(request,'about.html',context)
 
-#def shop(request):
-    #return render(request,'product.html',context)
 
-#def blog(request):
-    return render(request,'blog.html',context)
 
-#def contact(request):
-    return render(request,'contact.html',context)
-
-#def singUp(request):
-    return render(request,'registration.html',context)
+ 
+  
 
 

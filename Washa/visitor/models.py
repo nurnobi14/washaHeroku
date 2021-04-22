@@ -46,6 +46,7 @@ class special_part(models.Model):
     product_head = models.CharField(max_length=50,blank=False)
     product_name = models.CharField(max_length=250,blank=False)    
     button_name = models.CharField(max_length=50,blank=False)
+    product_code = models.CharField(max_length=50,blank=False,null=True)
 
 
 # now fetured part :
@@ -86,6 +87,7 @@ class LatestProduct(models.Model):
     img  = models.ImageField(upload_to="latest_img/")
     P_name = models.CharField(max_length=50,blank=False)
     P_price = models.CharField(max_length=10,blank=False)    
+    product_code = models.CharField(max_length=50,blank=False,null=True)
     
     def __str__(self) -> str:
         return self.P_name
@@ -125,6 +127,6 @@ class Ordered_product(models.Model):
     def __str__(self) -> str:
         return self.number
      
+
+
      
-    
- 

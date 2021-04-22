@@ -81,8 +81,11 @@
                         <img src="{{item.img.url}}" alt="special1" class="img-fluid w-100">
                         <div class="overlay text-center">
                             <h3>{{item.product_head}}</h3>
-                            <h4> {{item.product_name}}</h4>
-                            <a href="#">{{item.button_name}}</a>
+                            <h4> {{item.product_name}} <p class="text-warning">P_code: {{ item.product_code }}</p></h4>
+                              
+                            
+                            
+                            <a href="#" onclick="myFunction()" type="button" data-toggle="modal" data-target="#exampleModal">{{item.button_name}}</a>
                         </div>
                     </div>
                 </div>
@@ -308,19 +311,19 @@
                                 <a href="#"><i class="fas fa-random"></i></a>
                             </div>
                             <div class="link-icon2 ">
-                                <a href="#"><i class="fas fa-shopping-basket"></i></a>
+                                <a href="#" onclick="myFunction()" type="button" data-toggle="modal" data-target="#exampleModal"><i class="fas fa-shopping-basket"></i></a>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="row mx-0">
                     <div class="col-lg-6 px-0">
-                        <h5>{{ item.P_name }}</h5>
+                        <h6> {{ item.P_name }} </h6>
                         
                     </div>
                     <div class="col-lg-6 px-0 text-right">
                         <h6>{{ item.P_price }}</h6>
-                        
+                        <p class="text-danger">P_code: {{ item.product_code }}</p>
                     </div>
                     <div class="col-lg-6 px-0  star">
                         <i class="fas fa-star"></i>

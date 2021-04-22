@@ -13,12 +13,15 @@ from .models import LatestProduct
 from .models import testimonial
 from .models import My_blog
 from .models import Ordered_product
+#from .models import Ordershoped
+ 
+ 
 #start for header and unregister group class:
  
         #=== should be import Group ===
 admin.site.site_header = 'Welcome To E-buy Dashboard'
  
-admin.site.unregister(Group)
+#admin.site.unregister(Group)
 
 #End for header
 admin.site.register(Header_footerData)
@@ -32,4 +35,7 @@ admin.site.register(LatestProduct)
 admin.site.register(testimonial)
 admin.site.register(My_blog)
 admin.site.register(Ordered_product)
+#admin.site.register(Ordershoped)
+ 
+ 
  

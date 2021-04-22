@@ -9,6 +9,7 @@ from .models import  Header_footerData
 from .models import  bannarLayout
 from .models import  FormLayout
 from .models import  allRegister
+#from .models import  profilePhoto
 #=============
 # For message
 from django.contrib import messages
@@ -94,55 +95,23 @@ def userRegister(request):
         'formsdata': formdata,
          
     }
-    
-    
         
-    
-        
-    
     return render(request,'registration.html',context)
 
-
-#def userForgot(request):
-    data = Header_footerData.objects.all()
-     
-    
-    context = {
-        'datas': data,
-         
-         
-    }
-    return render(request,'forgot.html',context)
-
-
-#def userVerify(request):
-    data = Header_footerData.objects.all()
-     
-    
-    context = {
-        'datas': data,
-         
-         
-    }
-    return render(request,'veryfi.html',context)
-
-#def UserRepass(request):
-    data = Header_footerData.objects.all()
-     
-    
-    context = {
-        'datas': data,
-         
-         
-    }
-    return render(request,'repass.html',context)
-
 def Userprofile(request):
+     
     if request.user.is_authenticated:
-        return render(request, 'profile.html')
+        data = Header_footerData.objects.all()
+        
+    
+        context = {
+             'datas': data,   
+        }
+        return render(request, 'profile.html',context)
     else:
         return redirect('login')
-    #return render(request,'profile.html')
+    
+     
 
 def Userlogout(request):
     logout(request)

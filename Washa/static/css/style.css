@@ -385,7 +385,7 @@ button {
 .overlay {
 	position: absolute;
 	width: 90%;
-	height: 40%;
+	height: 50%;
 	background: rgba(0, 0, 0, 0.795);
 	bottom: -40px;
     left: 50%;
@@ -437,7 +437,7 @@ button {
 .special-item:hover .overlay{
     opacity: 1;
     transition: all linear.4s;
-    bottom: 20px;
+    bottom: 5px;
 }
 /* =========================== feature part css ==========================*/
 #feature{
