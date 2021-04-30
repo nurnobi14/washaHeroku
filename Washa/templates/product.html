@@ -1,8 +1,16 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block title %} Shop {% endblock  %}
+{% block search_section %}
+        <div class="search">
+        <form action="" method="GET">
+            <input type="text" class="form-control" name="querys" onfocus="this.placeholder=''" placeholder="{{ request.GET.query }}">
+            <button  type="submit"><i class="fas fa-search"></i></button> 
+        </form>
+    </div>
+    {% endblock %} 
 {% block bodyContaint %}
-
+    
 
 <!-- ============================ shop banner part start ===============================-->
 <section id="about-banner">

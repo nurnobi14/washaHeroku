@@ -39,7 +39,7 @@ class shopPrduct(models.Model):
     img = models.ImageField(upload_to="shop_productImgs/")
     p_name = models.CharField(max_length=50,blank=False)
     p_price_usd = models.IntegerField(blank=False)
-    product_code = models.CharField(max_length=50,null=True,default="")
+    product_code = models.CharField(max_length=50,blank=False)
     
     def __str__(self) -> str:
         return self.p_name
@@ -49,5 +49,8 @@ class Ordershoped(models.Model):
     number = models.CharField(max_length=50,blank=False) 
     product_Code = models.CharField(max_length=50,blank=False) 
     location = models.CharField(max_length=50,blank=False) 
+    
+    def __str__(self) -> str:
+        return self.number
     
          

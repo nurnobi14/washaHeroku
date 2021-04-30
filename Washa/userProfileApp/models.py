@@ -42,10 +42,10 @@ class allRegister(models.Model):
     userName = models.CharField(max_length=50,blank=True)
     userMail = models.CharField(max_length=50,blank=True)
     userPass = models.CharField(max_length=50,blank=True)
-    userConPass = models.CharField(max_length=50,blank=True)
+    userConPass = models.CharField(max_length=500,blank=True)
     
     def __str__(self) -> str:
-        return self.userMail
+        return self.userName
 
      
  

@@ -60,11 +60,5 @@ class Migration(migrations.Migration):
                 ('copyRightBy', models.CharField(default='', max_length=50)),
             ],
         ),
-        migrations.CreateModel(
-            name='User_Photo',
-            fields=[
-                ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('img', models.ImageField(upload_to='profilepic/')),
-            ],
-        ),
+        
     ]
