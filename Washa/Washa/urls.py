@@ -5,6 +5,10 @@ from django.conf import settings
 from django.shortcuts import render
 #================
 from django.contrib import admin
+from django.views.static import serve
+from django.conf.urls import url, include
+ 
+import django
 
 #admin.site.site_header = 'My project'                    # default: "Django Administration"
 admin.site.index_title = 'E-buy'                 # default: "Site administration"
@@ -14,8 +18,14 @@ admin.site.site_title = 'dhashboard'
 #from django.contrib.auth import views as auth_views
 def administrator(request):
     return render(request, 'admin_index.html')
+
  
+
 urlpatterns = [
+     
+    
+    url(r'^media/(?P<path>.*)$', serve,{'document_root': settings.MEDIA_ROOT}),
+    
     path('admin/', admin.site.urls),
     path('administrator/',  administrator), #custom admin panel
     path('',include('visitor.urls')),
@@ -24,9 +34,10 @@ urlpatterns = [
     path('',include('blog_apps.urls')),
     path('',include('contact_apps.urls')),
     path('',include('userProfileApp.urls')),
-]+static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)
+   
+]+static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT) 
 
-handler404 = 'visitor.views.error_404_view'
+#handler404 = 'visitor.views.error_404_view'
 
 
 
